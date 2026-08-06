@@ -1026,7 +1026,6 @@ h1 {
 
 .contact-item {
   display: grid;
-  gap: 0.2rem;
   border: 1px solid rgba(247, 240, 221, 0.11);
   border-radius: 8px;
   padding: 0.95rem 1rem;
@@ -1040,7 +1039,7 @@ a.contact-item:hover {
 
 .contact-item small {
   color: var(--honey-dark);
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 950;
   text-transform: uppercase;
 }
