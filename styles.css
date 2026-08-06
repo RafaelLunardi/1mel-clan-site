@@ -1066,14 +1066,16 @@ h1 {
   position: relative;
   align-self: center;
   min-height: auto;
-  border: 1px solid rgba(247, 240, 221, 0.1);
+  border: 1px solid rgba(214, 163, 58, 0.28);
   border-radius: 8px;
   padding: clamp(1.4rem, 3vw, 2.4rem);
   background:
     radial-gradient(circle at 85% 16%, rgba(214, 163, 58, 0.18), transparent 15rem),
     linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015)),
     #070707;
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 0 0 1px rgba(247, 240, 221, 0.06) inset,
+    0 26px 70px rgba(0, 0, 0, 0.58);
   overflow: hidden;
 }
 
@@ -1111,11 +1113,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(247, 240, 221, 0.11);
+  border: 1px solid rgba(214, 163, 58, 0.26);
   border-radius: 8px;
   min-height: 5.4rem;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.24);
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: 0 0 0 1px rgba(247, 240, 221, 0.035) inset;
   text-align: center;
 }
 
