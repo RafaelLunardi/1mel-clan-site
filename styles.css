@@ -751,16 +751,14 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(30deg, rgba(214, 163, 58, 0.12) 12%, transparent 12.5%, transparent 87%, rgba(214, 163, 58, 0.12) 87.5%, rgba(214, 163, 58, 0.12)),
-    linear-gradient(150deg, rgba(214, 163, 58, 0.12) 12%, transparent 12.5%, transparent 87%, rgba(214, 163, 58, 0.12) 87.5%, rgba(214, 163, 58, 0.12)),
-    linear-gradient(30deg, rgba(214, 163, 58, 0.12) 12%, transparent 12.5%, transparent 87%, rgba(214, 163, 58, 0.12) 87.5%, rgba(214, 163, 58, 0.12)),
-    linear-gradient(150deg, rgba(214, 163, 58, 0.12) 12%, transparent 12.5%, transparent 87%, rgba(214, 163, 58, 0.12) 87.5%, rgba(214, 163, 58, 0.12)),
-    linear-gradient(60deg, rgba(214, 163, 58, 0.08) 25%, transparent 25.5%, transparent 75%, rgba(214, 163, 58, 0.08) 75%, rgba(214, 163, 58, 0.08));
-  background-color: transparent;
-  background-position: 0 0, 0 0, 2.2rem 3.85rem, 2.2rem 3.85rem, 0 0;
-  background-size: 4.4rem 7.7rem;
-  mask-image: linear-gradient(135deg, black 0 38%, rgba(0, 0, 0, 0.55) 62%, transparent 100%);
-  opacity: 0.28;
+    url("data:image/svg+xml,%3Csvg width='180' height='156' viewBox='0 0 180 156' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d6a33a' stroke-width='2' stroke-opacity='.62'%3E%3Cpath d='M45 2 88 27v50L45 102 2 77V27L45 2Z'/%3E%3Cpath d='M135 2 178 27v50l-43 25-43-25V27l43-25Z'/%3E%3Cpath d='M90 78 133 103v50l-43 25-43-25v-50l43-25Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: -1.4rem 5rem;
+  background-size: 11rem 9.55rem;
+  mask-image:
+    radial-gradient(circle at 9% 30%, black 0 18rem, transparent 32rem),
+    radial-gradient(circle at 88% 18%, black 0 14rem, transparent 28rem),
+    linear-gradient(90deg, rgba(0,0,0,.9), transparent 46%, transparent 54%, rgba(0,0,0,.76));
+  opacity: 0.72;
   pointer-events: none;
 }
 
