@@ -667,6 +667,8 @@ footer {
 
 .game-nav-card {
   position: relative;
+  display: grid;
+  place-items: center;
   min-height: 4.4rem;
   overflow: hidden;
   border: 1px solid rgba(214, 163, 58, 0.28);
@@ -696,9 +698,6 @@ footer {
 .game-nav-card span {
   position: relative;
   z-index: 1;
-  display: grid;
-  place-items: center;
-  height: 100%;
   color: #fff7e5;
   font-weight: 950;
   text-align: center;
