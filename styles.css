@@ -793,7 +793,8 @@ nav,
   position: relative;
   background:
     radial-gradient(circle at 72% 20%, rgba(214, 163, 58, 0.18), transparent 22rem),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 62%);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent 62%),
+    #050505;
 }
 
 .home-hero::after {
@@ -813,7 +814,7 @@ nav,
 }
 
 .hero-copy::before {
-  content: "1-MEL";
+  content: "DARK HIVE";
   display: inline-flex;
   margin-bottom: 1rem;
   border: 1px solid rgba(214, 163, 58, 0.24);
@@ -837,6 +838,20 @@ nav a:hover,
 h1 {
   color: #fff8e8;
   text-shadow: 0 16px 42px rgba(214, 163, 58, 0.18);
+}
+
+.home-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(5.8rem, 17vw, 14.5rem);
+  letter-spacing: 0;
+}
+
+.home-hero .tagline {
+  max-width: 11ch;
+  color: #fff8e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 5vw, 5.2rem);
+  line-height: 0.92;
 }
 
 .intro {
