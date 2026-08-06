@@ -1197,9 +1197,51 @@ a.contact-item:hover {
 }
 
 .identity-card {
+  position: relative;
+  overflow: hidden;
   background:
     linear-gradient(180deg, rgba(214, 163, 58, 0.1), rgba(255, 255, 255, 0.025)),
     var(--panel);
+}
+
+.identity-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--game-bg);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.2) saturate(0.72);
+  opacity: 0.34;
+  transform: scale(1.04);
+}
+
+.identity-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.64)),
+    radial-gradient(circle at 80% 20%, rgba(214, 163, 58, 0.16), transparent 45%);
+}
+
+.identity-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.identity-card:nth-child(1) {
+  --game-bg: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg");
+}
+
+.identity-card:nth-child(2) {
+  --game-bg: url("https://drop-assets.ea.com/images/2kqSbfawI7SSYCe7Xg30oV/4a8b8edd51bcbcddbbb04158521ed74f/F1_25_2026_Season_Pack_DLC_Key_Art_3840x2160_RGB.jpg");
+}
+
+.identity-card:nth-child(3) {
+  --game-bg: url("https://cdn.cloudflare.steamstatic.com/steam/apps/252950/header.jpg");
 }
 
 .identity-card h3 {
