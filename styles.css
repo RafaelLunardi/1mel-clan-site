@@ -746,22 +746,7 @@ body {
 }
 
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background:
-    url("data:image/svg+xml,%3Csvg width='250' height='210' viewBox='0 0 250 210' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d6a33a' stroke-width='2.2' stroke-linecap='round' stroke-opacity='.58'%3E%3Cpath d='M42 8 78 29v42L42 92 6 71V29L42 8Z'/%3E%3Cpath d='M116 8 152 29v42l-36 21-36-21V29l36-21Z' stroke-dasharray='58 14 31 18 60 15'/%3E%3Cpath d='M79 73 115 94v42l-36 21-36-21V94l36-21Z' stroke-dasharray='40 16 62 22 34 14'/%3E%3Cpath d='M153 73 189 94v42l-36 21-36-21V94l36-21Z' stroke-dasharray='72 18 38 24 30 18'/%3E%3Cpath d='M42 136 78 157v42L42 220 6 199v-42l36-21Z' stroke-dasharray='36 26 48 18 20 40'/%3E%3Cpath d='M190 9 226 30v42l-36 21-36-21V30l36-21Z' stroke-dasharray='52 24 28 18 64 30'/%3E%3C/g%3E%3C/svg%3E");
-  background-position: -1.8rem 7rem;
-  background-size: 15.5rem 13rem;
-  mask-image:
-    radial-gradient(circle at 8% 8%, black 0 12rem, transparent 22rem),
-    radial-gradient(circle at 48% 4%, rgba(0,0,0,.46) 0 9rem, transparent 17rem),
-    radial-gradient(circle at 92% 10%, rgba(0,0,0,.72) 0 10rem, transparent 19rem),
-    radial-gradient(circle at 7% 28%, rgba(0,0,0,.7) 0 9rem, transparent 18rem),
-    radial-gradient(circle at 5% 82%, rgba(0,0,0,.5) 0 8rem, transparent 16rem);
-  opacity: 0.5;
-  pointer-events: none;
+  content: none;
 }
 
 body::after {
@@ -774,10 +759,10 @@ body::after {
   background-position: -2rem 0.35rem;
   background-size: 14rem 11.75rem;
   mask-image:
-    radial-gradient(circle at 6% 7%, black 0 11rem, transparent 21rem),
-    radial-gradient(circle at 34% 3%, rgba(0,0,0,.55) 0 8rem, transparent 17rem),
-    radial-gradient(circle at 90% 7%, rgba(0,0,0,.62) 0 9rem, transparent 18rem);
-  opacity: 0.48;
+    radial-gradient(circle at 6% 7%, black 0 10rem, transparent 19rem),
+    radial-gradient(circle at 34% 3%, rgba(0,0,0,.48) 0 7rem, transparent 16rem),
+    radial-gradient(circle at 90% 7%, rgba(0,0,0,.55) 0 8rem, transparent 17rem);
+  opacity: 0.34;
   pointer-events: none;
 }
 
