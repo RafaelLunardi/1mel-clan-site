@@ -720,6 +720,125 @@ footer {
   --game-bg: url("assets/rocket-league-card.jpg");
 }
 
+.cs2-member-hub {
+  position: relative;
+  z-index: 3;
+  margin: -3.2rem clamp(1rem, 4vw, 3.5rem) 0;
+  padding: 1rem;
+  border: 1px solid rgba(214, 163, 58, 0.24);
+  border-radius: 8px;
+  background: rgba(10, 10, 10, 0.78);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(14px);
+}
+
+.cs2-filter-bar {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.cs2-filter-bar button {
+  min-height: 2.75rem;
+  border: 1px solid rgba(214, 163, 58, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #f7d686;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cs2-filter-bar button:hover,
+.cs2-filter-bar button.active {
+  border-color: rgba(242, 199, 108, 0.82);
+  background: linear-gradient(135deg, rgba(214, 163, 58, 0.28), rgba(255, 255, 255, 0.04));
+  color: #fff7e5;
+}
+
+.cs2-member-panel {
+  margin-top: 1rem;
+}
+
+.cs2-comparison,
+.cs2-medal-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.cs2-comparison {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.cs2-compare-card,
+.cs2-medal-card {
+  border: 1px solid rgba(247, 240, 221, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cs2-compare-card {
+  display: grid;
+  gap: 0.75rem;
+  min-height: 10rem;
+  padding: 0.9rem;
+}
+
+.cs2-compare-card h3,
+.cs2-medal-card h3,
+.cs2-medal-header h2 {
+  margin: 0;
+}
+
+.cs2-compare-card strong {
+  color: #fff7e5;
+  font-size: 2.1rem;
+  line-height: 1;
+}
+
+.cs2-medal-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cs2-medal-header h2 {
+  color: #fff7e5;
+  font-size: clamp(2.3rem, 5vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.cs2-medal-header strong {
+  color: #f7d686;
+  font-size: 1.4rem;
+}
+
+.cs2-medal-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cs2-medal-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 9rem;
+  padding: 1rem;
+}
+
+.cs2-medal-card .trophy-medal {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.cs2-medal-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .game-trophy-hero {
   position: relative;
   overflow: hidden;
@@ -819,6 +938,9 @@ footer {
   }
 
   .trophy-game-nav,
+  .cs2-filter-bar,
+  .cs2-comparison,
+  .cs2-medal-grid,
   .game-trophy-grid {
     grid-template-columns: 1fr;
   }
@@ -834,6 +956,15 @@ footer {
   .trophy-hero,
   .game-trophy-hero {
     padding-top: clamp(4rem, 9vw, 8rem);
+  }
+
+  .cs2-member-hub {
+    margin: 1rem;
+  }
+
+  .cs2-medal-header {
+    display: grid;
+    align-items: start;
   }
 }
 

@@ -124,6 +124,143 @@ const renderTrophies = (items) => {
   `).join("");
 };
 
+const cs2Members = [
+  {
+    id: "rafael",
+    name: "Rafael",
+    tag: "Lider",
+    score: 94,
+    medals: [
+      ["Ouro", "Clutch decisivo", "Resolve round complicado quando a call pesa."],
+      ["MVP", "Entrada limpa", "Abre espaco e transforma vantagem pequena em round ganho."],
+      ["Diamante", "Capitao da call", "Mantem a colmeia junta nos mapas longos."]
+    ]
+  },
+  {
+    id: "bassa",
+    name: "Bassa",
+    tag: "Impacto",
+    score: 86,
+    medals: [
+      ["Ouro", "Energia de lobby", "Puxa o ritmo quando a partida precisa acelerar."],
+      ["Prata", "Trade seguro", "Fecha dupla e segura pos-bomb sem desespero."]
+    ]
+  },
+  {
+    id: "zana",
+    name: "Zana",
+    tag: "Controle",
+    score: 82,
+    medals: [
+      ["Ouro", "Calma no caos", "Segura o mapa e deixa a resenha competitiva no ponto."],
+      ["Bronze", "Utilidade", "Smoke e flash entrando no tempo certo."]
+    ]
+  },
+  {
+    id: "felbyz",
+    name: "Felbyz",
+    tag: "Clutch",
+    score: 88,
+    medals: [
+      ["MVP", "Sangue frio", "Encaixa a call e vira round que parecia perdido."],
+      ["Ouro", "Retake", "Volta no bomb com paciencia e mira quente."]
+    ]
+  },
+  {
+    id: "fer",
+    name: "Fer",
+    tag: "Versatil",
+    score: 79,
+    medals: [
+      ["Prata", "Flex", "Entra em qualquer frente e ajuda a manter o lobby girando."],
+      ["Bronze", "Apoio", "Cobre angulo ingrato sem reclamar da funcao."]
+    ]
+  },
+  {
+    id: "dudu",
+    name: "Dudu",
+    tag: "Pressao",
+    score: 77,
+    medals: [
+      ["Prata", "Ritmo forte", "Jogo acelerado, call direta e cara de campeonato."],
+      ["Bronze", "Execucao", "Ajuda a entrada acontecer sem travar o time."]
+    ]
+  },
+  {
+    id: "gabriel",
+    name: "Gabriel",
+    tag: "Base",
+    score: 74,
+    medals: [
+      ["Prata", "Consistencia", "Fecha a retaguarda e segura a troca quando precisa."],
+      ["Bronze", "Presenca", "Sempre aparece no lugar certo da rodada."]
+    ]
+  }
+];
+
+const renderCs2MemberPanel = (selectedId = "all") => {
+  const root = document.querySelector("#cs2-member-panel");
+  if (!root) return;
+
+  if (selectedId === "all") {
+    root.innerHTML = `
+      <div class="cs2-comparison">
+        ${cs2Members.map((member, index) => `
+          <article class="cs2-compare-card">
+            <div>
+              <span class="card-kicker">#${index + 1} / ${member.tag}</span>
+              <h3>${member.name}</h3>
+            </div>
+            <strong>${member.score}</strong>
+            <div class="progress" aria-label="${member.name} com ${member.score} pontos">
+              <span style="width: ${member.score}%"></span>
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    `;
+    return;
+  }
+
+  const member = cs2Members.find((item) => item.id === selectedId);
+  if (!member) return;
+  root.innerHTML = `
+    <div class="cs2-medal-header">
+      <span class="card-kicker">${member.tag}</span>
+      <h2>${member.name}</h2>
+      <strong>${member.score} pts</strong>
+    </div>
+    <div class="cs2-medal-grid">
+      ${member.medals.map(([tier, title, body]) => `
+        <article class="cs2-medal-card">
+          <span class="trophy-medal">${tier}</span>
+          <div>
+            <h3>${title}</h3>
+            <p>${body}</p>
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
+};
+
+const setupCs2MemberTabs = () => {
+  const buttons = document.querySelectorAll("[data-cs2-member]");
+  if (!buttons.length) return;
+  renderCs2MemberPanel("all");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((item) => {
+        item.classList.remove("active");
+        item.setAttribute("aria-selected", "false");
+      });
+      button.classList.add("active");
+      button.setAttribute("aria-selected", "true");
+      renderCs2MemberPanel(button.dataset.cs2Member);
+    });
+  });
+};
+
 fetch(dataUrl)
   .then((response) => response.json())
   .then((data) => {
@@ -138,6 +275,7 @@ fetch(dataUrl)
     renderEvents(data.events);
     renderTrophyStats(data.trophyStats);
     renderTrophies(data.trophies);
+    setupCs2MemberTabs();
   })
   .catch(() => {
     text("#last-updated", "dados indisponiveis");
