@@ -755,10 +755,12 @@ body::before {
   background-position: -1.8rem 7rem;
   background-size: 15.5rem 13rem;
   mask-image:
-    radial-gradient(circle at 7% 24%, black 0 10rem, transparent 19rem),
-    radial-gradient(circle at 92% 12%, rgba(0,0,0,.72) 0 8rem, transparent 17rem),
-    radial-gradient(circle at 5% 82%, rgba(0,0,0,.55) 0 8rem, transparent 16rem);
-  opacity: 0.46;
+    radial-gradient(circle at 8% 8%, black 0 12rem, transparent 22rem),
+    radial-gradient(circle at 48% 4%, rgba(0,0,0,.46) 0 9rem, transparent 17rem),
+    radial-gradient(circle at 92% 10%, rgba(0,0,0,.72) 0 10rem, transparent 19rem),
+    radial-gradient(circle at 7% 28%, rgba(0,0,0,.7) 0 9rem, transparent 18rem),
+    radial-gradient(circle at 5% 82%, rgba(0,0,0,.5) 0 8rem, transparent 16rem);
+  opacity: 0.5;
   pointer-events: none;
 }
 
