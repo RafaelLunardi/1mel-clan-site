@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Voltar ao inicio">
+      <a class="brand" href="index.html" aria-label="Voltar ao inicio">
         <img src="https://avatars.fastly.steamstatic.com/d6d5b1bfc3e3122a8edd3963e7639bcc722b31f4_full.jpg" alt="Logo do 1-MEL">
         <span>
           <strong>1-MEL</strong>
@@ -22,10 +22,9 @@
         </span>
       </a>
       <nav aria-label="Navegacao principal">
-        <a href="#avisos">Avisos</a>
-        <a href="#temporadas">Temporadas</a>
-        <a href="#estatisticas">Stats</a>
-        <a href="#agenda">Agenda</a>
+        <a aria-current="page" href="index.html">Principal</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="trofeus.html">Sala de trofeus</a>
       </nav>
       <a class="steam-link" href="https://steamcommunity.com/groups/1MEL" target="_blank" rel="noreferrer">Steam</a>
     </header>
@@ -42,7 +41,7 @@
           </p>
           <div class="hero-actions">
             <a class="primary-action" href="#temporadas">Ver temporadas</a>
-            <a class="secondary-action" href="#agenda">Proximos eventos</a>
+            <a class="secondary-action" href="agenda.html">Proximos eventos</a>
           </div>
         </div>
         <aside class="live-panel" aria-label="Resumo do grupo">
@@ -92,12 +91,13 @@
         <div class="stats-board" id="stats"></div>
       </section>
 
-      <section class="agenda" id="agenda">
+      <section class="agenda-preview" id="agenda">
         <div class="section-heading">
           <p class="eyebrow">Calendario</p>
-          <h2>Agenda 1-MEL</h2>
+          <h2>Proximos compromissos</h2>
+          <a class="inline-link" href="agenda.html">Ver agenda completa</a>
         </div>
-        <div class="event-list" id="events"></div>
+        <div class="event-list compact-list" id="events"></div>
       </section>
     </main>
 

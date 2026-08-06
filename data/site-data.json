@@ -83,5 +83,41 @@
       "title": "Resumo semanal",
       "body": "Atualizacao de estatisticas, melhores momentos e proximos desafios."
     }
+  ],
+  "trophyStats": [
+    { "label": "Titulos", "value": "2", "note": "campanhas registradas" },
+    { "label": "Podios F1 26", "value": "5", "note": "temporada atual" },
+    { "label": "MVPs", "value": "7", "note": "destaques da family" },
+    { "label": "Clutches CS2", "value": "18", "note": "rounds decisivos" }
+  ],
+  "trophies": [
+    {
+      "tier": "Ouro",
+      "title": "Primeira noite invicta no CS2",
+      "game": "Counter-Strike 2",
+      "date": "Agosto 2026",
+      "body": "Sequencia perfeita na rodada interna, com economia controlada e fechamento limpo nos mapas principais."
+    },
+    {
+      "tier": "Ouro",
+      "title": "GP de abertura 1-MEL",
+      "game": "F1 26",
+      "date": "Agosto 2026",
+      "body": "Primeira etapa oficial do campeonato interno, inaugurando tabela de pilotos e construtores."
+    },
+    {
+      "tier": "Prata",
+      "title": "Resenha competitiva Rocket League",
+      "game": "Rocket League",
+      "date": "Agosto 2026",
+      "body": "Treino fechado com series equilibradas e rotacao mais disciplinada no terceiro homem."
+    },
+    {
+      "tier": "Bronze",
+      "title": "Fundacao da Family",
+      "game": "1-MEL",
+      "date": "06 Agosto",
+      "body": "Registro oficial do grupo na Steam e inicio do arquivo publico do clan."
+    }
   ]
 }

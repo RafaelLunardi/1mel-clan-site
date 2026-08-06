@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Agenda do clan 1-MEL com proximos eventos, corridas, treinos e noites competitivas.">
+    <meta property="og:title" content="Agenda 1-MEL">
+    <meta property="og:description" content="Calendario oficial do 1-MEL para CS2, Rocket League e F1 26.">
+    <meta property="og:type" content="website">
+    <title>Agenda | 1-MEL</title>
+    <link rel="preconnect" href="https://avatars.fastly.steamstatic.com">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body data-page="agenda">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Voltar ao inicio">
+        <img src="https://avatars.fastly.steamstatic.com/d6d5b1bfc3e3122a8edd3963e7639bcc722b31f4_full.jpg" alt="Logo do 1-MEL">
+        <span>
+          <strong>1-MEL</strong>
+          <small>Brazilian gaming family</small>
+        </span>
+      </a>
+      <nav aria-label="Navegacao principal">
+        <a href="index.html">Principal</a>
+        <a aria-current="page" href="agenda.html">Agenda</a>
+        <a href="trofeus.html">Sala de trofeus</a>
+      </nav>
+      <a class="steam-link" href="https://steamcommunity.com/groups/1MEL" target="_blank" rel="noreferrer">Steam</a>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Calendario oficial</p>
+        <h1>Agenda</h1>
+        <p class="intro">Corridas, filas, treinos e resenhas organizadas para ninguem fingir que nao viu o horario.</p>
+      </section>
+
+      <section class="agenda page-section">
+        <div class="section-heading">
+          <p class="eyebrow">Proximos eventos</p>
+          <h2>Programacao 1-MEL</h2>
+        </div>
+        <div class="event-list timeline-list" id="events"></div>
+      </section>
+
+      <section class="section-grid">
+        <div class="section-heading">
+          <p class="eyebrow">Rotina</p>
+          <h2>Quadro semanal</h2>
+        </div>
+        <div class="schedule-grid">
+          <article class="stat-card"><span class="card-kicker">Segunda</span><strong>CS2</strong><span>Map pool, demo curta e fila competitiva.</span></article>
+          <article class="stat-card"><span class="card-kicker">Quarta</span><strong>RL</strong><span>Scrims e treino de rotacao.</span></article>
+          <article class="stat-card"><span class="card-kicker">Domingo</span><strong>F1 26</strong><span>Etapa oficial ou treino longo.</span></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>1-MEL</strong>
+      <span>Site estatico alimentado por dados locais. Ultima atualizacao: <time id="last-updated">--</time></span>
+    </footer>
+  </body>
+</html>

@@ -88,6 +88,7 @@ nav {
 }
 
 nav a:hover,
+nav a[aria-current="page"],
 .steam-link:hover {
   color: var(--honey);
 }
@@ -193,7 +194,8 @@ h1 {
 .stat-card,
 .season-card,
 .announcement,
-.event {
+.event,
+.trophy-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(17, 19, 25, 0.84);
@@ -235,7 +237,8 @@ h1 {
 .section-grid,
 .season-band,
 .stats-layout,
-.agenda {
+.agenda,
+.agenda-preview {
   padding: clamp(2.4rem, 6vw, 5rem) clamp(1rem, 4vw, 3.5rem);
 }
 
@@ -251,6 +254,13 @@ h2 {
   margin-bottom: 0;
   font-size: clamp(2rem, 5vw, 4.2rem);
   line-height: 0.95;
+}
+
+.inline-link {
+  color: var(--honey);
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-transform: uppercase;
 }
 
 .announcement-list,
@@ -374,6 +384,10 @@ h2 {
   align-items: center;
 }
 
+.compact-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .event-date {
   display: grid;
   place-items: center;
@@ -392,6 +406,96 @@ footer {
   padding: 2rem clamp(1rem, 4vw, 3.5rem);
   border-top: 1px solid var(--line);
   color: var(--muted);
+}
+
+.page-hero {
+  min-height: 44vh;
+  padding: clamp(4rem, 9vw, 8rem) clamp(1rem, 4vw, 3.5rem) clamp(2rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(255, 194, 51, 0.14), rgba(124, 197, 255, 0.05) 42%, transparent 78%);
+}
+
+.page-hero h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(4.2rem, 13vw, 10rem);
+}
+
+.trophy-hero {
+  background: linear-gradient(135deg, rgba(255, 194, 51, 0.18), rgba(94, 224, 140, 0.06) 45%, transparent 78%);
+}
+
+.page-section {
+  padding-top: clamp(2rem, 5vw, 4rem);
+}
+
+.timeline-list {
+  grid-template-columns: 1fr;
+}
+
+.timeline-list .event {
+  min-height: 9rem;
+}
+
+.schedule-grid,
+.trophy-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.schedule-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trophy-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.trophy-card {
+  position: relative;
+  min-height: 20rem;
+  overflow: hidden;
+  padding: 1.1rem;
+}
+
+.trophy-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% -28% -20%;
+  height: 9rem;
+  background: linear-gradient(90deg, rgba(255, 194, 51, 0.2), rgba(124, 197, 255, 0.1));
+  transform: rotate(-7deg);
+}
+
+.trophy-card h3,
+.trophy-card p,
+.trophy-card span {
+  position: relative;
+}
+
+.trophy-card h3 {
+  margin: 3.4rem 0 0.7rem;
+  font-size: 1.32rem;
+}
+
+.trophy-card p {
+  color: #cbd0d9;
+}
+
+.trophy-medal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 0.7rem;
+  border: 1px solid rgba(255, 194, 51, 0.45);
+  border-radius: 999px;
+  background: radial-gradient(circle, #ffe8a3, var(--honey));
+  color: #1b1300;
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+  box-shadow: 0 12px 34px rgba(255, 194, 51, 0.18);
 }
 
 @media (max-width: 920px) {
@@ -416,7 +520,9 @@ footer {
   .announcement-list,
   .season-grid,
   .stats-board,
-  .event-list {
+  .event-list,
+  .schedule-grid,
+  .trophy-grid {
     grid-template-columns: 1fr;
   }
 

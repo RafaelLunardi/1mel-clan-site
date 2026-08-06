@@ -16,6 +16,7 @@ const text = (selector, value) => {
 
 const renderAnnouncements = (items) => {
   const root = document.querySelector("#announcements");
+  if (!root) return;
   root.innerHTML = items.map((item) => `
     <article class="announcement">
       <time datetime="${item.date}">${formatDate(item.date)}</time>
@@ -27,6 +28,7 @@ const renderAnnouncements = (items) => {
 
 const renderSeasons = (items) => {
   const root = document.querySelector("#seasons");
+  if (!root) return;
   root.innerHTML = items.map((item) => `
     <article class="season-card">
       <div>
@@ -47,6 +49,7 @@ const renderSeasons = (items) => {
 
 const renderStats = (items) => {
   const root = document.querySelector("#stats");
+  if (!root) return;
   root.innerHTML = items.map((item) => `
     <article class="stat-card">
       <span class="card-kicker">${item.label}</span>
@@ -58,7 +61,9 @@ const renderStats = (items) => {
 
 const renderEvents = (items) => {
   const root = document.querySelector("#events");
-  root.innerHTML = items.map((item) => `
+  if (!root) return;
+  const limit = document.body.dataset.page === "agenda" ? items.length : 2;
+  root.innerHTML = items.slice(0, limit).map((item) => `
     <article class="event">
       <div class="event-date">
         <span>${item.date}<br>${item.time}</span>
@@ -67,6 +72,31 @@ const renderEvents = (items) => {
         <h3>${item.title}</h3>
         <p>${item.body}</p>
       </div>
+    </article>
+  `).join("");
+};
+
+const renderTrophyStats = (items) => {
+  const root = document.querySelector("#trophy-stats");
+  if (!root) return;
+  root.innerHTML = items.map((item) => `
+    <article class="stat-card">
+      <span class="card-kicker">${item.label}</span>
+      <strong>${item.value}</strong>
+      <span>${item.note}</span>
+    </article>
+  `).join("");
+};
+
+const renderTrophies = (items) => {
+  const root = document.querySelector("#trophies");
+  if (!root) return;
+  root.innerHTML = items.map((item) => `
+    <article class="trophy-card">
+      <span class="trophy-medal">${item.tier}</span>
+      <span class="card-kicker">${item.game} / ${item.date}</span>
+      <h3>${item.title}</h3>
+      <p>${item.body}</p>
     </article>
   `).join("");
 };
@@ -82,6 +112,8 @@ fetch(dataUrl)
     renderSeasons(data.seasons);
     renderStats(data.stats);
     renderEvents(data.events);
+    renderTrophyStats(data.trophyStats);
+    renderTrophies(data.trophies);
   })
   .catch(() => {
     text("#last-updated", "dados indisponiveis");
