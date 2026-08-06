@@ -827,7 +827,8 @@ h1 {
   text-shadow: 0 16px 42px rgba(214, 163, 58, 0.18);
 }
 
-.home-hero h1 {
+.home-hero h1,
+.clan-logo {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(5.8rem, 17vw, 14.5rem);
   letter-spacing: 0;
@@ -848,6 +849,27 @@ h1 {
 .home-hero h1::selection {
   color: #050505;
   background: #f2c76c;
+}
+
+.clan-logo {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(0.1rem, 1vw, 0.6rem);
+  white-space: nowrap;
+}
+
+.logo-one,
+.logo-rest {
+  display: inline-block;
+}
+
+.logo-one {
+  font-size: 1.38em;
+  line-height: 0.72;
+}
+
+.logo-rest {
+  font-size: 0.9em;
 }
 
 .home-hero .tagline {
