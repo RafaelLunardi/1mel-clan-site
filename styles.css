@@ -1212,8 +1212,8 @@ a.contact-item:hover {
   background-image: var(--game-bg);
   background-position: center;
   background-size: cover;
-  filter: brightness(0.2) saturate(0.72);
-  opacity: 0.34;
+  filter: brightness(0.55) saturate(0.92);
+  opacity: 0.56;
   transform: scale(1.04);
 }
 
@@ -1223,8 +1223,8 @@ a.contact-item:hover {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.64)),
-    radial-gradient(circle at 80% 20%, rgba(214, 163, 58, 0.16), transparent 45%);
+    linear-gradient(90deg, rgba(5, 5, 5, 0.84), rgba(5, 5, 5, 0.54)),
+    radial-gradient(circle at 82% 26%, rgba(214, 163, 58, 0.1), transparent 46%);
 }
 
 .identity-card > * {
@@ -1238,28 +1238,28 @@ a.contact-item:hover {
 
 .identity-card.game-cs2::before {
   background-position: center;
-  filter: brightness(1.04) saturate(1.08);
-  opacity: 0.78;
+  filter: brightness(0.62) saturate(0.92);
+  opacity: 0.58;
 }
 
 .identity-card.game-cs2::after {
   background:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.68), rgba(5, 5, 5, 0.08)),
-    radial-gradient(circle at 82% 28%, rgba(214, 163, 58, 0.04), transparent 45%);
+    linear-gradient(90deg, rgba(5, 5, 5, 0.84), rgba(5, 5, 5, 0.5)),
+    radial-gradient(circle at 82% 28%, rgba(214, 163, 58, 0.08), transparent 45%);
 }
 
 .identity-card.game-f1 {
-  --game-bg: url("https://drop-assets.ea.com/images/2kqSbfawI7SSYCe7Xg30oV/4a8b8edd51bcbcddbbb04158521ed74f/F1_25_2026_Season_Pack_DLC_Key_Art_3840x2160_RGB.jpg");
+  --game-bg: url("assets/f1-card.jpg");
 }
 
 .identity-card.game-rl {
-  --game-bg: url("https://cdn.cloudflare.steamstatic.com/steam/apps/252950/library_hero.jpg");
+  --game-bg: url("assets/rocket-league-card.jpg");
 }
 
 .identity-card.game-rl::before {
-  background-position: center right;
-  filter: brightness(0.36) saturate(0.9);
-  opacity: 0.5;
+  background-position: center;
+  filter: brightness(0.62) saturate(0.95);
+  opacity: 0.6;
 }
 
 .identity-card h3 {
