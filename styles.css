@@ -720,3 +720,341 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Soft hive refresh */
+:root {
+  --bg: #fff7db;
+  --panel: #fffdf3;
+  --panel-2: #fff0b8;
+  --text: #2a1d08;
+  --muted: #74643d;
+  --line: rgba(107, 75, 9, 0.18);
+  --honey: #f6b91f;
+  --honey-dark: #8d5a00;
+  --green: #78c56e;
+  --red: #e66a5f;
+  --blue: #72b9dc;
+  --shadow: 0 24px 70px rgba(109, 73, 0, 0.18);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 217, 102, 0.7), transparent 28rem),
+    radial-gradient(circle at 88% 18%, rgba(255, 238, 178, 0.78), transparent 24rem),
+    linear-gradient(180deg, #fffdf4 0%, #fff3c7 46%, #ffe4a1 100%);
+  color: var(--text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(30deg, rgba(141, 90, 0, 0.06) 12%, transparent 12.5%, transparent 87%, rgba(141, 90, 0, 0.06) 87.5%, rgba(141, 90, 0, 0.06)),
+    linear-gradient(150deg, rgba(141, 90, 0, 0.06) 12%, transparent 12.5%, transparent 87%, rgba(141, 90, 0, 0.06) 87.5%, rgba(141, 90, 0, 0.06));
+  background-size: 4.4rem 7.6rem;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.site-header {
+  background: rgba(255, 252, 239, 0.86);
+  box-shadow: 0 10px 36px rgba(105, 68, 0, 0.09);
+}
+
+.brand img {
+  background: #111;
+  box-shadow: 0 8px 22px rgba(246, 185, 31, 0.22);
+}
+
+nav,
+.brand small,
+.metric-label,
+.stat-card span:last-child,
+.announcement p,
+.identity-card p,
+.member-card p,
+.season-card p,
+.event p,
+.trophy-card p {
+  color: var(--muted);
+}
+
+.steam-link {
+  background: #fff8da;
+  border-color: rgba(141, 90, 0, 0.22);
+}
+
+.home-hero {
+  grid-template-columns: minmax(0, 0.92fr) minmax(21rem, 0.9fr);
+  padding-top: clamp(2.5rem, 6vw, 5.5rem);
+  background:
+    radial-gradient(circle at 74% 18%, rgba(246, 185, 31, 0.32), transparent 20rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 242, 190, 0.5));
+}
+
+.hero-copy {
+  position: relative;
+}
+
+.hero-copy::before {
+  content: "1-MEL";
+  display: inline-flex;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(141, 90, 0, 0.2);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--honey-dark);
+  font-size: 0.82rem;
+  font-weight: 950;
+}
+
+.eyebrow,
+.tagline,
+.inline-link,
+nav a[aria-current="page"],
+nav a:hover,
+.steam-link:hover {
+  color: var(--honey-dark);
+}
+
+h1 {
+  text-shadow: 0 10px 30px rgba(246, 185, 31, 0.2);
+}
+
+.intro {
+  color: #5f4d24;
+}
+
+.primary-action {
+  background: linear-gradient(135deg, #ffd966, #f4b51f);
+  color: #2a1d08;
+  box-shadow: 0 14px 30px rgba(171, 107, 0, 0.22);
+}
+
+.secondary-action {
+  background: rgba(255, 255, 255, 0.66);
+  border-color: rgba(141, 90, 0, 0.18);
+  color: var(--text);
+}
+
+.hero-showcase {
+  display: grid;
+  gap: 1rem;
+}
+
+.flag-frame,
+.shirt-frame,
+.kit-card,
+.kit-ribbon {
+  margin: 0;
+  border: 1px solid rgba(141, 90, 0, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 253, 243, 0.78);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.flag-frame img,
+.shirt-frame img,
+.kit-card img,
+.kit-ribbon img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.flag-frame img {
+  aspect-ratio: 16 / 10;
+}
+
+.shirt-frame {
+  width: min(82%, 25rem);
+  justify-self: end;
+}
+
+.shirt-frame img {
+  aspect-ratio: 16 / 9;
+}
+
+.flag-frame figcaption,
+.shirt-frame figcaption,
+.kit-card figcaption {
+  padding: 0.75rem 0.9rem;
+  color: var(--honey-dark);
+  font-weight: 900;
+}
+
+.ticker {
+  justify-content: center;
+  padding-top: 1.2rem;
+}
+
+.ticker span {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(141, 90, 0, 0.18);
+  color: #6f4b00;
+}
+
+.leader-section,
+.kit-section {
+  padding: clamp(2.4rem, 6vw, 5rem) clamp(1rem, 4vw, 3.5rem);
+}
+
+.leader-section {
+  display: grid;
+  grid-template-columns: minmax(18rem, 30rem) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.colony-note,
+.identity-card,
+.member-card,
+.stat-card,
+.season-card,
+.event,
+.trophy-card,
+.announcement,
+.leader-spotlight {
+  background: rgba(255, 253, 243, 0.8);
+  border-color: rgba(141, 90, 0, 0.16);
+  box-shadow: 0 16px 42px rgba(109, 73, 0, 0.11);
+}
+
+.colony-note {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+}
+
+.leader-spotlight {
+  background:
+    linear-gradient(160deg, rgba(255, 219, 104, 0.72), rgba(255, 253, 243, 0.86)),
+    var(--panel);
+  color: var(--text);
+  border-color: rgba(141, 90, 0, 0.24);
+}
+
+.leader-spotlight p {
+  color: #594113;
+}
+
+.leader-stats span {
+  background: rgba(255, 255, 255, 0.54);
+  border-color: rgba(141, 90, 0, 0.18);
+}
+
+.leader-stats b {
+  color: var(--text);
+}
+
+.identity-section,
+.roster-section,
+.agenda-preview,
+.stats-layout {
+  background: transparent;
+}
+
+.identity-card h3,
+.member-card h3,
+.season-card h3,
+.event h3,
+.trophy-card h3 {
+  color: #211501;
+}
+
+.identity-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 245, 203, 0.74)),
+    var(--panel);
+}
+
+.identity-card h3 {
+  font-size: 2rem;
+}
+
+.kit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.75fr);
+  gap: 1rem;
+}
+
+.kit-card img {
+  height: 100%;
+  max-height: 32rem;
+}
+
+.kit-card.wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.roster-section,
+.season-band {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 228, 151, 0.38));
+  border-color: rgba(141, 90, 0, 0.16);
+}
+
+.member-avatar {
+  background: linear-gradient(135deg, #2a1d08, #f6b91f);
+  color: #fff7db;
+}
+
+.leader-card {
+  background: linear-gradient(135deg, rgba(255, 218, 96, 0.72), rgba(255, 253, 243, 0.82));
+}
+
+.page-hero {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(246, 185, 31, 0.28), transparent 21rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 242, 190, 0.72));
+}
+
+.trophy-hero {
+  background:
+    radial-gradient(circle at 12% 12%, rgba(246, 185, 31, 0.34), transparent 21rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(255, 229, 154, 0.72));
+}
+
+.kit-ribbon {
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.95fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  margin: clamp(1rem, 3vw, 2rem) clamp(1rem, 4vw, 3.5rem) 0;
+  padding: 0.8rem;
+}
+
+.kit-ribbon img {
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+.kit-ribbon div {
+  padding: clamp(0.8rem, 3vw, 1.4rem);
+}
+
+.event-date {
+  background: linear-gradient(135deg, #2a1d08, #6c4700);
+  color: #fff7db;
+}
+
+.trophy-medal {
+  background: radial-gradient(circle, #fff1a6, #f4b51f);
+}
+
+@media (max-width: 920px) {
+  .home-hero,
+  .leader-section,
+  .kit-grid,
+  .kit-ribbon {
+    grid-template-columns: 1fr;
+  }
+
+  .shirt-frame {
+    width: 100%;
+  }
+}

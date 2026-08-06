@@ -14,5 +14,5 @@ O script faz commit e push das alteracoes para o GitHub. Com GitHub Pages ativo,
 
 ## Publicacao
 
-Este projeto publica pelo GitHub Pages usando GitHub Actions. Todo push na branch
-`main` dispara um deploy automatico.
+Este projeto publica pelo GitHub Pages usando o branch `gh-pages`. A branch
+`main` guarda o codigo principal, e `gh-pages` recebe a versao publicada.
