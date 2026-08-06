@@ -1233,19 +1233,19 @@ a.contact-item:hover {
 }
 
 .identity-card:nth-child(1) {
-  --game-bg: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_hero.jpg");
+  --game-bg: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg");
 }
 
 .identity-card:nth-child(1)::before {
-  background-position: center right;
-  filter: brightness(0.62) saturate(1);
-  opacity: 0.72;
+  background-position: center;
+  filter: brightness(0.86) saturate(1.05);
+  opacity: 0.82;
 }
 
 .identity-card:nth-child(1)::after {
   background:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.38)),
-    radial-gradient(circle at 82% 28%, rgba(214, 163, 58, 0.18), transparent 45%);
+    linear-gradient(90deg, rgba(5, 5, 5, 0.78), rgba(5, 5, 5, 0.18)),
+    radial-gradient(circle at 82% 28%, rgba(214, 163, 58, 0.08), transparent 45%);
 }
 
 .identity-card:nth-child(2) {
