@@ -748,7 +748,7 @@ footer {
     radial-gradient(circle at 16% 16%, rgba(214, 163, 58, 0.16), transparent 32rem);
 }
 
-.game-trophy-hero > * {
+.game-trophy-hero > :not(.trophy-game-nav) {
   position: relative;
   z-index: 2;
 }
