@@ -59,6 +59,29 @@ const renderStats = (items) => {
   `).join("");
 };
 
+const initials = (name) => name
+  .split(" ")
+  .map((part) => part[0])
+  .join("")
+  .slice(0, 2)
+  .toUpperCase();
+
+const renderMembers = (items) => {
+  const root = document.querySelector("#members");
+  if (!root) return;
+  root.innerHTML = items.map((item) => `
+    <article class="member-card${item.name === "Rafael" ? " leader-card" : ""}">
+      <div class="member-avatar" aria-hidden="true">${initials(item.name)}</div>
+      <div>
+        <span class="card-kicker">${item.tag}</span>
+        <h3>${item.name}</h3>
+        <strong>${item.role}</strong>
+        <p>${item.bio}</p>
+      </div>
+    </article>
+  `).join("");
+};
+
 const renderEvents = (items) => {
   const root = document.querySelector("#events");
   if (!root) return;
@@ -111,6 +134,7 @@ fetch(dataUrl)
     renderAnnouncements(data.announcements);
     renderSeasons(data.seasons);
     renderStats(data.stats);
+    renderMembers(data.members);
     renderEvents(data.events);
     renderTrophyStats(data.trophyStats);
     renderTrophies(data.trophies);

@@ -113,13 +113,22 @@ main {
   overflow: hidden;
 }
 
-.hero {
+.hero,
+.home-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 27rem);
   gap: clamp(1.5rem, 5vw, 4rem);
   min-height: 84vh;
   align-items: center;
   padding: clamp(3rem, 8vw, 7rem) clamp(1rem, 4vw, 3.5rem) 2rem;
+}
+
+.home-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 32rem);
+  min-height: 88vh;
+  background:
+    linear-gradient(115deg, rgba(255, 194, 51, 0.12), transparent 44%),
+    radial-gradient(circle at 82% 24%, rgba(124, 197, 255, 0.12), transparent 28rem);
 }
 
 .hero-copy {
@@ -195,7 +204,10 @@ h1 {
 .season-card,
 .announcement,
 .event,
-.trophy-card {
+.trophy-card,
+.identity-card,
+.member-card,
+.leader-spotlight {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(17, 19, 25, 0.84);
@@ -217,6 +229,74 @@ h1 {
   font-size: 0.88rem;
 }
 
+.leader-spotlight {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.2rem, 3vw, 1.6rem);
+  background:
+    linear-gradient(180deg, rgba(255, 194, 51, 0.2), rgba(17, 19, 25, 0.94)),
+    var(--panel);
+  border-color: rgba(255, 194, 51, 0.28);
+  box-shadow: var(--shadow);
+}
+
+.leader-spotlight::before {
+  content: "1MEL";
+  position: absolute;
+  right: -0.55rem;
+  bottom: -1.6rem;
+  color: rgba(255, 194, 51, 0.08);
+  font-size: 7rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.leader-spotlight strong {
+  position: relative;
+  display: block;
+  margin: 0.15rem 0 0.6rem;
+  font-size: clamp(3.2rem, 7vw, 5.6rem);
+  line-height: 0.9;
+}
+
+.leader-spotlight p,
+.leader-stats,
+.spotlight-label {
+  position: relative;
+}
+
+.leader-spotlight p {
+  color: #e5dec8;
+  font-size: 1.05rem;
+}
+
+.spotlight-label {
+  color: var(--honey);
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.leader-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.leader-stats span {
+  border: 1px solid rgba(255, 194, 51, 0.22);
+  border-radius: 8px;
+  padding: 0.85rem;
+  color: var(--muted);
+}
+
+.leader-stats b {
+  display: block;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
 .ticker {
   display: flex;
   flex-wrap: wrap;
@@ -235,6 +315,8 @@ h1 {
 }
 
 .section-grid,
+.identity-section,
+.roster-section,
 .season-band,
 .stats-layout,
 .agenda,
@@ -264,6 +346,8 @@ h2 {
 }
 
 .announcement-list,
+.identity-grid,
+.roster-grid,
 .season-grid,
 .stats-board,
 .event-list {
@@ -271,14 +355,17 @@ h2 {
   gap: 1rem;
 }
 
-.announcement-list {
+.announcement-list,
+.identity-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .announcement,
 .season-card,
 .stat-card,
-.event {
+.event,
+.identity-card,
+.member-card {
   padding: 1.05rem;
 }
 
@@ -292,6 +379,8 @@ h2 {
 }
 
 .announcement h3,
+.identity-card h3,
+.member-card h3,
 .season-card h3,
 .event h3 {
   margin: 0.45rem 0;
@@ -299,9 +388,74 @@ h2 {
 }
 
 .announcement p,
+.identity-card p,
+.member-card p,
 .season-card p,
 .event p {
   color: #cbd0d9;
+}
+
+.identity-card {
+  min-height: 13rem;
+}
+
+.identity-card h3 {
+  font-size: 1.42rem;
+}
+
+.roster-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 194, 51, 0.06)),
+    #0c0e12;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.roster-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.member-card {
+  display: grid;
+  grid-template-columns: 4.3rem minmax(0, 1fr);
+  gap: 0.9rem;
+  min-height: 15rem;
+  align-content: start;
+}
+
+.member-card strong {
+  display: block;
+  color: #f3df9b;
+  font-size: 0.9rem;
+}
+
+.member-avatar {
+  display: grid;
+  place-items: center;
+  width: 4.3rem;
+  height: 4.3rem;
+  border: 1px solid rgba(255, 194, 51, 0.4);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--honey), #7cc5ff);
+  color: #111319;
+  font-size: 1.1rem;
+  font-weight: 950;
+}
+
+.leader-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(255, 194, 51, 0.18), rgba(17, 19, 25, 0.9));
+  border-color: rgba(255, 194, 51, 0.34);
+}
+
+.leader-card .member-avatar {
+  width: 5.2rem;
+  height: 5.2rem;
+  font-size: 1.35rem;
+}
+
+.home-command {
+  background: rgba(0, 0, 0, 0.16);
 }
 
 .season-band {
@@ -517,7 +671,10 @@ footer {
   }
 
   .hero,
+  .home-hero,
   .announcement-list,
+  .identity-grid,
+  .roster-grid,
   .season-grid,
   .stats-board,
   .event-list,
@@ -528,6 +685,14 @@ footer {
 
   .hero {
     min-height: auto;
+  }
+
+  .home-hero {
+    min-height: auto;
+  }
+
+  .leader-card {
+    grid-column: auto;
   }
 
   .section-heading,
@@ -548,5 +713,10 @@ footer {
 
   .hero-actions a {
     width: 100%;
+  }
+
+  .leader-stats,
+  .member-card {
+    grid-template-columns: 1fr;
   }
 }

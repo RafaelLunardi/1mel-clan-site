@@ -3,12 +3,56 @@
   "group": {
     "name": "1-MEL",
     "tagline": "Mais que um cla, uma Family",
-    "members": 3,
-    "online": 3,
+    "members": 7,
+    "online": 7,
     "founded": "06/08",
     "location": "Brasil",
     "steamUrl": "https://steamcommunity.com/groups/1MEL"
   },
+  "members": [
+    {
+      "name": "Rafael",
+      "role": "Lider geral",
+      "tag": "Founder",
+      "bio": "Comanda a 1-MEL, organiza a Family e segura a call quando a partida fica torta."
+    },
+    {
+      "name": "Bassa",
+      "role": "Membro 1-MEL",
+      "tag": "Impacto",
+      "bio": "Presenca forte no lobby e nome certo quando a partida precisa de energia."
+    },
+    {
+      "name": "Zana",
+      "role": "Membro 1-MEL",
+      "tag": "Controle",
+      "bio": "Joga com calma, segura o ritmo e deixa a resenha competitiva no ponto."
+    },
+    {
+      "name": "Felbyz",
+      "role": "Membro 1-MEL",
+      "tag": "Clutch",
+      "bio": "Aparece nos momentos decisivos e transforma round complicado em historia."
+    },
+    {
+      "name": "Fer",
+      "role": "Membro 1-MEL",
+      "tag": "Versatil",
+      "bio": "Entra em qualquer frente da 1-MEL e ajuda a manter o lobby girando."
+    },
+    {
+      "name": "Dudu",
+      "role": "Membro 1-MEL",
+      "tag": "Pressao",
+      "bio": "Gosta de jogo acelerado, call direta e partida com cara de campeonato."
+    },
+    {
+      "name": "Gabriel",
+      "role": "Membro 1-MEL",
+      "tag": "Consistencia",
+      "bio": "Peca firme do roster, daqueles que deixam a Family mais dificil de derrubar."
+    }
+  ],
   "announcements": [
     {
       "date": "2026-08-06",
@@ -56,7 +100,7 @@
     { "label": "Win rate CS2", "value": "66%", "note": "ultimas 12 partidas" },
     { "label": "Pontos F1 26", "value": "128", "note": "campeonato interno" },
     { "label": "Eventos ativos", "value": "4", "note": "proximos 14 dias" },
-    { "label": "Membros online", "value": "3/3", "note": "base Steam" }
+    { "label": "Roster 1-MEL", "value": "7", "note": "membros oficiais" }
   ],
   "events": [
     {
