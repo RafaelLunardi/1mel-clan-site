@@ -1233,7 +1233,12 @@ a.contact-item:hover {
 }
 
 .identity-card:nth-child(1) {
-  --game-bg: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg");
+  --game-bg: url("https://cdn.cloudflare.steamstatic.com/steam/apps/730/library_hero.jpg");
+}
+
+.identity-card:nth-child(1)::before {
+  filter: brightness(0.38) saturate(0.9);
+  opacity: 0.5;
 }
 
 .identity-card:nth-child(2) {
