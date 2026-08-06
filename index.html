@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Site oficial do 1-MEL: anuncios, calendario e estatisticas do clan em CS2, Rocket League e F1 26.">
+    <meta property="og:title" content="1-MEL | Mais que um cla, uma Family">
+    <meta property="og:description" content="Temporadas, anuncios, lineups e estatisticas do clan 1-MEL.">
+    <meta property="og:type" content="website">
+    <title>1-MEL | Clan Hub</title>
+    <link rel="preconnect" href="https://avatars.fastly.steamstatic.com">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Voltar ao inicio">
+        <img src="https://avatars.fastly.steamstatic.com/d6d5b1bfc3e3122a8edd3963e7639bcc722b31f4_full.jpg" alt="Logo do 1-MEL">
+        <span>
+          <strong>1-MEL</strong>
+          <small>Brazilian gaming family</small>
+        </span>
+      </a>
+      <nav aria-label="Navegacao principal">
+        <a href="#avisos">Avisos</a>
+        <a href="#temporadas">Temporadas</a>
+        <a href="#estatisticas">Stats</a>
+        <a href="#agenda">Agenda</a>
+      </nav>
+      <a class="steam-link" href="https://steamcommunity.com/groups/1MEL" target="_blank" rel="noreferrer">Steam</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Counter-Strike 2 / Rocket League / F1 26</p>
+          <h1>1-MEL</h1>
+          <p class="tagline">Mais que um cla, uma Family.</p>
+          <p class="intro">
+            Uma central para acompanhar anuncios, campanhas, resultados e estatisticas do clan.
+            Competicao, provocacao e tilt coletivo, agora com placar organizado.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#temporadas">Ver temporadas</a>
+            <a class="secondary-action" href="#agenda">Proximos eventos</a>
+          </div>
+        </div>
+        <aside class="live-panel" aria-label="Resumo do grupo">
+          <div>
+            <span class="metric-value" id="members-count">3</span>
+            <span class="metric-label">membros</span>
+          </div>
+          <div>
+            <span class="metric-value" id="online-count">3</span>
+            <span class="metric-label">online agora</span>
+          </div>
+          <div>
+            <span class="metric-value" id="founded-date">06/08</span>
+            <span class="metric-label">fundado no Brasil</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="ticker" aria-label="Destaques">
+        <span>Proximo GP: Zandvoort</span>
+        <span>CS2 temporada ativa</span>
+        <span>F1 26 com campeonato interno</span>
+        <span>Atualizacao diaria local</span>
+      </section>
+
+      <section class="section-grid" id="avisos">
+        <div class="section-heading">
+          <p class="eyebrow">Comunicados</p>
+          <h2>Avisos do clan</h2>
+        </div>
+        <div class="announcement-list" id="announcements"></div>
+      </section>
+
+      <section class="season-band" id="temporadas">
+        <div class="section-heading">
+          <p class="eyebrow">Campanhas</p>
+          <h2>Temporadas em andamento</h2>
+        </div>
+        <div class="season-grid" id="seasons"></div>
+      </section>
+
+      <section class="stats-layout" id="estatisticas">
+        <div class="section-heading">
+          <p class="eyebrow">Performance</p>
+          <h2>Estatisticas gerais</h2>
+        </div>
+        <div class="stats-board" id="stats"></div>
+      </section>
+
+      <section class="agenda" id="agenda">
+        <div class="section-heading">
+          <p class="eyebrow">Calendario</p>
+          <h2>Agenda 1-MEL</h2>
+        </div>
+        <div class="event-list" id="events"></div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>1-MEL</strong>
+      <span>Site estatico alimentado por dados locais. Ultima atualizacao: <time id="last-updated">--</time></span>
+    </footer>
+  </body>
+</html>

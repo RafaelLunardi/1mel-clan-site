@@ -1,0 +1,87 @@
+{
+  "lastUpdated": "2026-08-06",
+  "group": {
+    "name": "1-MEL",
+    "tagline": "Mais que um cla, uma Family",
+    "members": 3,
+    "online": 3,
+    "founded": "06/08",
+    "location": "Brasil",
+    "steamUrl": "https://steamcommunity.com/groups/1MEL"
+  },
+  "announcements": [
+    {
+      "date": "2026-08-06",
+      "title": "Hub oficial do 1-MEL no ar",
+      "body": "Agora o clan tem uma central propria para avisos, temporadas, calendario e estatisticas."
+    },
+    {
+      "date": "2026-08-09",
+      "title": "F1 26 em Zandvoort",
+      "body": "Etapa marcada para domingo as 16h. Confirmem presenca e preparem estrategia de pneus."
+    },
+    {
+      "date": "2026-08-10",
+      "title": "CS2: rodada de mapas da semana",
+      "body": "A prioridade da semana e fechar partidas em Mirage, Ancient e Inferno para medir consistencia."
+    }
+  ],
+  "seasons": [
+    {
+      "game": "Counter-Strike 2",
+      "status": "Temporada ativa",
+      "record": "8V / 4D",
+      "progress": 67,
+      "summary": "Foco em entrada coordenada, controle de economia e clutch rate nos rounds longos.",
+      "tags": ["Mirage", "Ancient", "Inferno"]
+    },
+    {
+      "game": "F1 26",
+      "status": "Campeonato interno",
+      "record": "3 GPs",
+      "progress": 42,
+      "summary": "Calendario com etapas semanais, tabela de pilotos e construtores em atualizacao.",
+      "tags": ["Zandvoort", "Monza", "Interlagos"]
+    },
+    {
+      "game": "Rocket League",
+      "status": "Treinos abertos",
+      "record": "5 series",
+      "progress": 58,
+      "summary": "Rotacao, pressao no terceiro homem e finalizacoes de parede em observacao.",
+      "tags": ["2v2", "3v3", "Scrims"]
+    }
+  ],
+  "stats": [
+    { "label": "Win rate CS2", "value": "66%", "note": "ultimas 12 partidas" },
+    { "label": "Pontos F1 26", "value": "128", "note": "campeonato interno" },
+    { "label": "Eventos ativos", "value": "4", "note": "proximos 14 dias" },
+    { "label": "Membros online", "value": "3/3", "note": "base Steam" }
+  ],
+  "events": [
+    {
+      "date": "09 AGO",
+      "time": "16:00",
+      "title": "1-MEL em Zandvoort | StopAndGo F1 26",
+      "body": "Etapa do campeonato interno com treino livre antes da largada."
+    },
+    {
+      "date": "10 AGO",
+      "time": "21:00",
+      "title": "Noite CS2",
+      "body": "Fila fechada, revisao rapida de calls e mapas competitivos."
+    },
+    {
+      "date": "12 AGO",
+      "time": "20:30",
+      "title": "Rocket League Scrims",
+      "body": "Treino curto para rotacao, defesa de tabela e contra-ataque."
+    },
+    {
+      "date": "15 AGO",
+      "time": "22:00",
+      "title": "Resumo semanal",
+      "body": "Atualizacao de estatisticas, melhores momentos e proximos desafios."
+    }
+  ]
+}
