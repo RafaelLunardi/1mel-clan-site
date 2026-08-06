@@ -203,9 +203,10 @@ const renderCs2MemberPanel = (selectedId = "all") => {
   if (!root) return;
 
   if (selectedId === "all") {
+    const ranking = [...cs2Members].sort((a, b) => b.score - a.score);
     root.innerHTML = `
       <div class="cs2-comparison">
-        ${cs2Members.map((member, index) => `
+        ${ranking.map((member, index) => `
           <article class="cs2-compare-card">
             <div>
               <span class="card-kicker">#${index + 1} / ${member.tag}</span>
@@ -247,16 +248,27 @@ const renderCs2MemberPanel = (selectedId = "all") => {
 const setupCs2MemberTabs = () => {
   const buttons = document.querySelectorAll("[data-cs2-member]");
   if (!buttons.length) return;
-  renderCs2MemberPanel("all");
+
+  const memberIds = ["all", ...cs2Members.map((member) => member.id)];
+  const initialId = memberIds.includes(window.location.hash.slice(1))
+    ? window.location.hash.slice(1)
+    : "all";
+
+  const activate = (id) => {
+    buttons.forEach((item) => {
+      const isActive = item.dataset.cs2Member === id;
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+    });
+    renderCs2MemberPanel(id);
+  };
+
+  activate(initialId);
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      buttons.forEach((item) => {
-        item.classList.remove("active");
-        item.setAttribute("aria-selected", "false");
-      });
-      button.classList.add("active");
-      button.setAttribute("aria-selected", "true");
-      renderCs2MemberPanel(button.dataset.cs2Member);
+      const id = button.dataset.cs2Member;
+      history.replaceState(null, "", `#${id}`);
+      activate(id);
     });
   });
 };
