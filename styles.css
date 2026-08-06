@@ -831,6 +831,23 @@ h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(5.8rem, 17vw, 14.5rem);
   letter-spacing: 0;
+  color: transparent;
+  background:
+    linear-gradient(180deg, #fff2a5 0%, #f5b62a 18%, #9b5a00 48%, #ffd875 62%, #8a4d00 82%, #fff1a0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px rgba(255, 222, 112, 0.85);
+  filter: drop-shadow(0 0 8px rgba(255, 185, 38, 0.5)) drop-shadow(0 16px 34px rgba(0, 0, 0, 0.78));
+  text-shadow:
+    0 1px 0 #fff0a8,
+    0 2px 0 #8c5200,
+    0 3px 0 #4a2700,
+    0 0 24px rgba(255, 186, 38, 0.48);
+}
+
+.home-hero h1::selection {
+  color: #050505;
+  background: #f2c76c;
 }
 
 .home-hero .tagline {
