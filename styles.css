@@ -834,16 +834,18 @@ h1 {
   letter-spacing: 0;
   color: transparent;
   background:
-    linear-gradient(180deg, #ffe08a 0%, #c98712 20%, #704000 46%, #e0a331 58%, #5d3300 78%, #b06b08 100%);
+    radial-gradient(circle at 28% 18%, rgba(255, 228, 139, 0.55) 0 8%, transparent 18%),
+    repeating-linear-gradient(112deg, rgba(255, 232, 149, 0.14) 0 2px, rgba(73, 39, 0, 0.16) 2px 5px),
+    linear-gradient(180deg, #d39a2d 0%, #9b5b08 22%, #4f2b00 48%, #b87612 62%, #3d2100 82%, #8b4d05 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 1px rgba(92, 52, 0, 0.95);
-  filter: drop-shadow(0 0 3px rgba(214, 163, 58, 0.34)) drop-shadow(0 18px 34px rgba(0, 0, 0, 0.82));
+  -webkit-text-stroke: 1px rgba(45, 23, 0, 0.98);
+  filter: drop-shadow(0 0 2px rgba(214, 135, 18, 0.24)) drop-shadow(0 18px 32px rgba(0, 0, 0, 0.86));
   text-shadow:
-    0 1px 0 #f6c35b,
-    0 2px 0 #6d3f00,
-    0 4px 0 #241300,
-    0 0 14px rgba(214, 135, 18, 0.28);
+    0 1px 0 #c88924,
+    0 2px 0 #4b2900,
+    0 4px 0 #160b00,
+    0 0 9px rgba(184, 103, 12, 0.22);
 }
 
 .home-hero h1::selection {
