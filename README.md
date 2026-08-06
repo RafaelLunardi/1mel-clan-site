@@ -14,10 +14,5 @@ O script faz commit e push das alteracoes para o GitHub. Com GitHub Pages ativo,
 
 ## Publicacao
 
-Este projeto foi pensado para GitHub Pages:
-
-1. Abra o repositorio no GitHub.
-2. Va em Settings > Pages.
-3. Em Source, selecione `Deploy from a branch`.
-4. Escolha `main` e `/root`.
-
+Este projeto publica pelo GitHub Pages usando GitHub Actions. Todo push na branch
+`main` dispara um deploy automatico.
