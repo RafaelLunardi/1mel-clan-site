@@ -834,8 +834,11 @@ h1 {
   letter-spacing: 0;
   color: transparent;
   background:
-    radial-gradient(circle at 28% 18%, rgba(255, 228, 139, 0.55) 0 8%, transparent 18%),
-    repeating-linear-gradient(112deg, rgba(255, 232, 149, 0.14) 0 2px, rgba(73, 39, 0, 0.16) 2px 5px),
+    radial-gradient(circle at 18% 22%, rgba(255, 230, 148, 0.45) 0 4%, transparent 11%),
+    radial-gradient(circle at 46% 37%, rgba(255, 204, 89, 0.28) 0 3%, transparent 9%),
+    radial-gradient(circle at 71% 18%, rgba(69, 37, 0, 0.34) 0 4%, transparent 12%),
+    radial-gradient(circle at 82% 68%, rgba(255, 216, 114, 0.22) 0 3%, transparent 10%),
+    radial-gradient(circle at 33% 78%, rgba(57, 29, 0, 0.32) 0 4%, transparent 13%),
     linear-gradient(180deg, #d39a2d 0%, #9b5b08 22%, #4f2b00 48%, #b87612 62%, #3d2100 82%, #8b4d05 100%);
   background-clip: text;
   -webkit-background-clip: text;
