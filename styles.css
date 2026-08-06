@@ -659,9 +659,9 @@ footer {
   width: max-content;
   margin: 0;
   position: absolute;
-  top: clamp(1.4rem, 2.8vw, 2.3rem);
+  top: clamp(6rem, 7vw, 7rem);
   left: 50%;
-  z-index: 2;
+  z-index: 12;
   transform: translateX(-50%);
 }
 
@@ -724,6 +724,7 @@ footer {
 .game-trophy-hero {
   position: relative;
   overflow: hidden;
+  padding-top: clamp(8.5rem, 12vw, 10.5rem);
 }
 
 .game-trophy-hero::before {
@@ -826,11 +827,13 @@ footer {
   .trophy-game-nav {
     position: static;
     width: 100%;
+    padding: 1rem;
     margin-bottom: 1.5rem;
     transform: none;
   }
 
-  .trophy-hero {
+  .trophy-hero,
+  .game-trophy-hero {
     padding-top: clamp(4rem, 9vw, 8rem);
   }
 }
