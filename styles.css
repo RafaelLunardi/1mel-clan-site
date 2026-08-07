@@ -11,6 +11,9 @@
   --red: #ff6d6d;
   --blue: #7cc5ff;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --blog-gold: #d8a412;
+  --blog-gold-soft: rgba(216, 164, 18, 0.62);
+  --blog-muted: #9a9a9a;
 }
 
 * {
