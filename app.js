@@ -135,6 +135,15 @@ const cs2Members = [
       ["Season 2", "Season 2", "Medalha da Season 2.", "assets/cs2-season-2-medal.png"],
       ["Season 3", "Season 3", "Medalha da Season 3.", "assets/cs2-season-3-medal.png"],
       ["Season 4", "Season 4", "Medalha da Season 4.", "assets/cs2-season-4-medal.png"]
+    ],
+    stats: [
+      ["Kills", "37.624"],
+      ["Mortes", "33.333"],
+      ["K/D geral", "1,129"],
+      ["MVPs", "5.515"],
+      ["5K", "50"],
+      ["4K", "422"],
+      ["3K", "2.174"]
     ]
   },
   {
@@ -243,6 +252,23 @@ const renderCs2MemberPanel = (selectedId = "all") => {
     </div>
   `;
 
+  const renderMemberStats = (member) => member.stats ? `
+    <section class="cs2-member-stats" aria-label="Resumo das 4 temporadas de ${member.name}">
+      <div>
+        <span class="card-kicker">Soma das 4 temporadas</span>
+        <h3>${member.name} no CS2</h3>
+      </div>
+      <div class="cs2-stats-grid">
+        ${member.stats.map(([label, value]) => `
+          <article class="cs2-stat-card">
+            <span>${label}</span>
+            <strong>${value}</strong>
+          </article>
+        `).join("")}
+      </div>
+    </section>
+  ` : "";
+
   if (selectedId === "all") {
     const ranking = [...cs2Members].sort((a, b) => b.score - a.score);
     root.innerHTML = renderMedalSheet(ranking, "Planilha de medalhas CS2");
@@ -251,7 +277,10 @@ const renderCs2MemberPanel = (selectedId = "all") => {
 
   const member = cs2Members.find((item) => item.id === selectedId);
   if (!member) return;
-  root.innerHTML = renderMedalSheet([member], `Medalhas CS2 de ${member.name}`);
+  root.innerHTML = `
+    ${renderMedalSheet([member], `Medalhas CS2 de ${member.name}`)}
+    ${renderMemberStats(member)}
+  `;
 };
 
 const setupCs2MemberTabs = () => {
