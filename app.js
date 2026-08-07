@@ -175,7 +175,7 @@ const cs2Members = [
   {
     id: "fer",
     name: "Fer",
-    tag: "Ancora",
+    tag: "Âncora",
     score: 79,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-fer-season-7-medal.png"],
@@ -185,7 +185,7 @@ const cs2Members = [
   {
     id: "dudu",
     name: "Dudu",
-    tag: "Rifler / Ancora",
+    tag: "Rifler / Âncora",
     score: 77,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-dudu-season-7-medal.png"],
