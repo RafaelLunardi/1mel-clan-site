@@ -132,8 +132,9 @@ const cs2Members = [
     score: 94,
     medals: [
       ["Season 7", "Clutch decisivo", "Resolve round complicado quando a call pesa.", "assets/cs2-season-7-medal.png"],
-      ["MVP", "Entrada limpa", "Abre espaco e transforma vantagem pequena em round ganho."],
-      ["Diamante", "Capitao da call", "Mantem a colmeia junta nos mapas longos."]
+      ["Season 2", "Season 2", "Medalha da Season 2.", "assets/cs2-season-2-medal.png"],
+      ["Season 3", "Season 3", "Medalha da Season 3.", "assets/cs2-season-3-medal.png"],
+      ["Season 4", "Season 4", "Medalha da Season 4.", "assets/cs2-season-4-medal.png"]
     ]
   },
   {
