@@ -4551,24 +4551,18 @@ body.blog-home {
   background: var(--blog-gold-soft);
 }
 
-.blog-search {
-  position: relative;
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 2px solid var(--blog-gold);
-  border-radius: 999px;
+.blog-steam-link {
+  color: var(--blog-gold);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color 160ms ease, text-shadow 160ms ease;
 }
 
-.blog-search::after {
-  content: "";
-  position: absolute;
-  right: -0.38rem;
-  bottom: -0.28rem;
-  width: 0.58rem;
-  height: 2px;
-  background: var(--blog-gold);
-  transform: rotate(45deg);
-  transform-origin: center;
+.blog-steam-link:hover {
+  color: #fff7d8;
+  text-shadow: 0 0 1rem rgba(216, 164, 18, 0.5);
 }
 
 .blog-hero {
