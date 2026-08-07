@@ -2982,6 +2982,159 @@ footer {
   font-size: 0.88rem;
 }
 
+.f1-status-showcase {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 5.4rem);
+  padding: clamp(6rem, 11vw, 9rem) clamp(1.25rem, 6vw, 7rem) clamp(3rem, 6vw, 5rem);
+  border-top: 1px solid rgba(247, 240, 221, 0.06);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.98), rgba(5, 5, 5, 0.84) 52%, rgba(5, 5, 5, 0.96)),
+    radial-gradient(circle at 82% 22%, rgba(214, 163, 58, 0.1), transparent 28rem),
+    linear-gradient(180deg, #050505, #080806 60%, #030303);
+}
+
+.f1-status-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 34% 8% auto 14%;
+  height: clamp(10rem, 20vw, 17rem);
+  pointer-events: none;
+  background: url("assets/f1-card-formula.png") center / contain no-repeat;
+  filter: grayscale(1) brightness(0.18) contrast(1.1);
+  opacity: 0.18;
+}
+
+.f1-status-showcase::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(214, 163, 58, 0.055) 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, transparent 0 14rem, rgba(214, 163, 58, 0.035) 14rem 14.05rem);
+  opacity: 0.34;
+}
+
+.f1-status-showcase > * {
+  position: relative;
+  z-index: 1;
+}
+
+.f1-status-title {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: clamp(4rem, 8vw, 6.5rem);
+}
+
+.f1-status-title p {
+  margin: 0;
+  color: #d6a33a;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.f1-status-title h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 0.92;
+  text-transform: uppercase;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.58);
+}
+
+.f1-status-title h1::after {
+  content: "";
+  display: block;
+  width: 3.9rem;
+  height: 0.16rem;
+  margin-top: 1.45rem;
+  background: #d6a33a;
+}
+
+.f1-status-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  max-width: 94rem;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(247, 240, 221, 0.1);
+}
+
+.f1-status-strip article {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 10.8rem;
+  border-right: 1px solid rgba(247, 240, 221, 0.12);
+  padding: 0.5rem 1.1rem 1rem;
+  text-align: center;
+}
+
+.f1-status-strip article:last-child {
+  border-right: 0;
+}
+
+.f1-status-strip svg {
+  width: 3.3rem;
+  height: 3.3rem;
+  margin-bottom: 1.25rem;
+  fill: none;
+  stroke: #d6a33a;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 0.75rem rgba(214, 163, 58, 0.2));
+}
+
+.f1-status-strip span {
+  min-height: 2.3rem;
+  color: #d8d0bf;
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.f1-status-strip strong {
+  display: block;
+  margin-top: 0.55rem;
+  color: #fff;
+  font-size: clamp(3rem, 5vw, 4.7rem);
+  font-weight: 950;
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  text-shadow: 0 0.75rem 1.8rem rgba(0, 0, 0, 0.62);
+}
+
+.f1-status-divider {
+  width: min(94rem, 100%);
+  height: 1px;
+  margin: 4.4rem auto 0;
+  background: linear-gradient(90deg, rgba(247, 240, 221, 0.08), rgba(247, 240, 221, 0.18), rgba(247, 240, 221, 0.08));
+}
+
+.f1-status-divider::after {
+  content: "";
+  display: block;
+  width: 8.8rem;
+  height: 0.14rem;
+  margin: -0.07rem auto 0;
+  background: #d6a33a;
+}
+
+.f1-status-note {
+  margin: 1.2rem auto 0;
+  max-width: 94rem;
+  color: rgba(216, 208, 191, 0.64);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @media (max-width: 920px) {
   .site-header {
     align-items: flex-start;
@@ -3094,6 +3247,50 @@ footer {
   .f1-status-list small {
     grid-column: 2;
     justify-self: start;
+  }
+
+  .f1-status-showcase {
+    min-height: auto;
+    padding: 4rem 1rem 3rem;
+  }
+
+  .f1-status-showcase::before {
+    inset: 52% -12% auto -12%;
+    height: 11rem;
+  }
+
+  .f1-status-title {
+    margin-bottom: 2.5rem;
+  }
+
+  .f1-status-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .f1-status-strip article {
+    min-height: 9.3rem;
+    border-right: 1px solid rgba(247, 240, 221, 0.1);
+    border-bottom: 1px solid rgba(247, 240, 221, 0.08);
+  }
+
+  .f1-status-strip article:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .f1-status-strip svg {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .f1-status-strip span {
+    min-height: 2rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+
+  .f1-status-strip strong {
+    font-size: 3rem;
   }
 
   .f1-history-card,
