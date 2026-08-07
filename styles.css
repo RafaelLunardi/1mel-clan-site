@@ -1336,9 +1336,9 @@ footer {
 .f1-gallery-wall {
   display: grid;
   grid-template-columns: repeat(7, minmax(8.5rem, 1fr));
-  min-height: 23rem;
+  grid-auto-rows: minmax(23rem, auto);
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   border: 1px solid rgba(214, 163, 58, 0.32);
   border-radius: 8px 8px 0 0;
   background:
@@ -1363,8 +1363,12 @@ footer {
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(0, 0, 0, 0.22));
 }
 
-.f1-display-cell:last-child {
+.f1-display-cell:nth-child(7n) {
   border-right: 0;
+}
+
+.f1-display-cell:nth-child(n+8) {
+  border-top: 1px solid rgba(214, 163, 58, 0.24);
 }
 
 .f1-spotlight {
@@ -1429,18 +1433,6 @@ footer {
   color: #f7d686;
   font-size: 0.56rem;
   font-weight: 850;
-}
-
-.f1-gallery-wall::after {
-  content: "";
-  position: sticky;
-  left: 0;
-  bottom: 0;
-  grid-column: 1 / -1;
-  height: 1rem;
-  margin-top: -1rem;
-  background: linear-gradient(180deg, #1d1710, #070604);
-  box-shadow: 0 -0.12rem 0 rgba(247, 214, 134, 0.34), 0 0 1.6rem rgba(214, 163, 58, 0.42);
 }
 
 .f1-object-cup::before,
