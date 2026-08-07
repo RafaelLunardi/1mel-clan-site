@@ -1286,9 +1286,9 @@ footer {
 }
 
 .f1-hero {
-  min-height: clamp(16rem, 21vw, 20.5rem);
-  padding-top: clamp(5.4rem, 6vw, 6.6rem);
-  padding-bottom: 0.6rem;
+  min-height: clamp(22rem, 31vw, 30rem);
+  padding-top: clamp(7rem, 8vw, 8.5rem);
+  padding-bottom: clamp(1.4rem, 3vw, 2.2rem);
 }
 
 .f1-hero h1 {
@@ -1309,29 +1309,11 @@ footer {
 
 .f1-title-logo {
   display: block;
-  width: min(32rem, 56vw);
-  max-height: clamp(4.4rem, 10vw, 7.2rem);
+  width: min(39rem, 72vw);
+  max-height: clamp(5.2rem, 13vw, 9.4rem);
   object-fit: contain;
   object-position: left center;
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.55));
-}
-
-.f1-hero-cars {
-  position: absolute;
-  left: 50%;
-  top: 52%;
-  z-index: 2;
-  width: min(39rem, 42vw);
-  max-height: 13rem;
-  object-fit: contain;
-  object-position: center;
-  opacity: 0.82;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  filter:
-    drop-shadow(0 1.4rem 2.2rem rgba(0, 0, 0, 0.62))
-    saturate(1.02)
-    contrast(1.05);
 }
 
 .game-trophy-hero > .f1-championship-button {
@@ -1360,7 +1342,7 @@ footer {
 .game-trophy-hero > .f1-hero-actions {
   position: absolute;
   right: clamp(1.5rem, 7vw, 7rem);
-  bottom: clamp(2rem, 3.8vw, 3.4rem);
+  bottom: clamp(5rem, 8vw, 7rem);
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
@@ -3441,16 +3423,6 @@ footer {
 
   .game-trophy-hero > .f1-hero-actions {
     justify-content: flex-start;
-  }
-
-  .f1-hero-cars {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: min(32rem, 92vw);
-    max-height: 12rem;
-    margin: 1.5rem 0 0;
-    transform: none;
   }
 
   .f1-championships-heading {
