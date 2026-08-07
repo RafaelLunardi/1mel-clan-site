@@ -782,6 +782,68 @@ footer {
   text-transform: uppercase;
 }
 
+.race-time .race-flag {
+  position: relative;
+  display: block;
+  width: 3.6rem;
+  height: 2.35rem;
+  overflow: hidden;
+  border: 1px solid rgba(247, 240, 221, 0.26);
+  border-radius: 4px;
+  box-shadow: 0 0.45rem 1rem rgba(0, 0, 0, 0.28);
+}
+
+.flag-nl {
+  background: linear-gradient(180deg, #ae1c28 0 33.33%, #fff 33.33% 66.66%, #21468b 66.66%);
+}
+
+.flag-it {
+  background: linear-gradient(90deg, #009246 0 33.33%, #fff 33.33% 66.66%, #ce2b37 66.66%);
+}
+
+.flag-cn {
+  background: #de2910;
+}
+
+.flag-cn::before {
+  content: "★";
+  position: absolute;
+  left: 0.38rem;
+  top: 0.22rem;
+  color: #ffde00;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.flag-es {
+  background: linear-gradient(180deg, #aa151b 0 25%, #f1bf00 25% 75%, #aa151b 75%);
+}
+
+.flag-az {
+  background: linear-gradient(180deg, #00b5e2 0 33.33%, #ef3340 33.33% 66.66%, #509e2f 66.66%);
+}
+
+.flag-us {
+  background:
+    linear-gradient(90deg, #3c3b6e 0 42%, transparent 42%),
+    repeating-linear-gradient(180deg, #b22234 0 0.18rem, #fff 0.18rem 0.36rem);
+}
+
+.flag-sg {
+  background: linear-gradient(180deg, #ef3340 0 50%, #fff 50%);
+}
+
+.flag-sg::before {
+  content: "";
+  position: absolute;
+  left: 0.42rem;
+  top: 0.34rem;
+  width: 0.58rem;
+  height: 0.58rem;
+  border-radius: 50%;
+  box-shadow: -0.16rem 0 0 0.12rem #fff;
+}
+
 .race-time span {
   display: block;
   margin-top: 0.55rem;
