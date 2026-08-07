@@ -716,6 +716,10 @@ footer {
   --game-bg: url("assets/f1-card-formula.png");
 }
 
+.game-nav-card.game-f1 span {
+  opacity: 0;
+}
+
 .game-nav-card.game-rl {
   --game-bg: url("assets/rocket-league-card.jpg");
 }
