@@ -713,7 +713,7 @@ footer {
 }
 
 .game-nav-card.game-f1 {
-  --game-bg: url("assets/f1-card.jpg");
+  --game-bg: url("assets/f1-card-formula.png");
 }
 
 .game-nav-card.game-rl {
@@ -1000,7 +1000,7 @@ footer {
 }
 
 .f1-hero {
-  --hero-game-bg: url("assets/f1-card.jpg");
+  --hero-game-bg: url("assets/f1-card-formula.png");
 }
 
 .rl-hero {
@@ -1717,7 +1717,7 @@ footer {
   border-radius: 6px;
   background:
     linear-gradient(120deg, rgba(5, 5, 5, 0.6), rgba(5, 5, 5, 0.1)),
-    url("assets/f1-card.jpg") center / cover;
+    url("assets/f1-card-formula.png") center / cover;
   filter: grayscale(1) brightness(0.52);
 }
 
@@ -2485,7 +2485,7 @@ a.contact-item:hover {
 }
 
 .identity-card.game-f1 {
-  --game-bg: url("assets/f1-card.jpg");
+  --game-bg: url("assets/f1-card-formula.png");
 }
 
 .identity-card.game-rl {
