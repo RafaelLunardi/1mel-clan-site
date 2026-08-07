@@ -1306,6 +1306,40 @@ footer {
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.55));
 }
 
+.game-trophy-hero > .f1-championship-button {
+  position: absolute;
+  right: clamp(1.5rem, 7vw, 7rem);
+  bottom: clamp(5rem, 8vw, 7rem);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 3.1rem;
+  border: 1px solid rgba(214, 163, 58, 0.52);
+  border-radius: 4px;
+  padding: 0 1.05rem;
+  background:
+    linear-gradient(135deg, rgba(214, 163, 58, 0.2), rgba(0, 0, 0, 0.42)),
+    rgba(5, 5, 5, 0.72);
+  color: #f7d686;
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 1.1rem 2.4rem rgba(0, 0, 0, 0.34);
+}
+
+.f1-championship-button:hover {
+  border-color: rgba(255, 224, 143, 0.86);
+  color: #fff7e5;
+}
+
+.f1-championship-button span {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
 .cs2-title-mark {
   display: block;
   width: min(36rem, 72vw);
@@ -1826,6 +1860,150 @@ footer {
   color: #f7d686;
 }
 
+.f1-championships {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 3.4rem);
+  border-top: 1px solid rgba(214, 163, 58, 0.18);
+  border-bottom: 1px solid rgba(214, 163, 58, 0.18);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(214, 163, 58, 0.13), transparent 24rem),
+    linear-gradient(180deg, #080705, #0e0d0b 54%, #070707);
+}
+
+.f1-championships::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(214, 163, 58, 0.09) 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, transparent 0 15rem, rgba(214, 163, 58, 0.055) 15rem 15.06rem);
+  opacity: 0.38;
+}
+
+.f1-championships > * {
+  position: relative;
+  z-index: 1;
+}
+
+.f1-championships-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.f1-championships-heading h2 {
+  color: #fff7e5;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.f1-championships-heading > span {
+  max-width: 30rem;
+  color: var(--muted);
+}
+
+.f1-overall-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.f1-overall-stats article,
+.f1-championship-card {
+  border: 1px solid rgba(247, 240, 221, 0.11);
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(214, 163, 58, 0.12), transparent 40%),
+    rgba(255, 255, 255, 0.032);
+}
+
+.f1-overall-stats article {
+  min-height: 8rem;
+  padding: 1rem;
+}
+
+.f1-overall-stats span,
+.f1-championship-title span {
+  color: #f7d686;
+  font-size: 0.76rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.f1-overall-stats strong {
+  display: block;
+  margin: 0.45rem 0 0.15rem;
+  color: #fff7e5;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  line-height: 0.9;
+}
+
+.f1-overall-stats small {
+  color: var(--muted);
+}
+
+.f1-championship-card {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.44fr) minmax(0, 1fr);
+  gap: 1rem;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.f1-championship-title {
+  align-self: stretch;
+  border-right: 1px solid rgba(214, 163, 58, 0.18);
+  padding-right: 1rem;
+}
+
+.f1-championship-title h3 {
+  margin: 0.6rem 0 0.65rem;
+  color: #fff7e5;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  line-height: 0.95;
+}
+
+.f1-championship-title p {
+  color: var(--muted);
+}
+
+.f1-standings-table {
+  overflow-x: auto;
+}
+
+.f1-standings-table table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+}
+
+.f1-standings-table th,
+.f1-standings-table td {
+  border-bottom: 1px solid rgba(247, 240, 221, 0.09);
+  padding: 0.78rem 0.7rem;
+  text-align: left;
+}
+
+.f1-standings-table thead th {
+  color: #f7d686;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.f1-standings-table tbody th {
+  color: #fff7e5;
+}
+
+.f1-standings-table td {
+  color: #cfc7b4;
+}
+
 @media (max-width: 920px) {
   .site-header {
     align-items: flex-start;
@@ -1889,6 +2067,33 @@ footer {
 
   .f1-gallery-wall {
     grid-template-columns: repeat(7, minmax(10rem, 1fr));
+  }
+
+  .game-trophy-hero > .f1-championship-button {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 1.5rem;
+  }
+
+  .f1-championships-heading {
+    display: grid;
+    align-items: start;
+  }
+
+  .f1-championship-card {
+    grid-template-columns: 1fr;
+  }
+
+  .f1-championship-title {
+    border-right: 0;
+    border-bottom: 1px solid rgba(214, 163, 58, 0.18);
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .f1-overall-stats {
+    grid-template-columns: 1fr;
   }
 
   .f1-division-mark {
