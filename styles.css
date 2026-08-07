@@ -721,7 +721,22 @@ footer {
 }
 
 .game-nav-card.game-cs2 {
-  --game-bg: url("assets/cs2-card.jpg");
+  --game-bg: url("assets/counter-strike-2-logo-title.png");
+}
+
+.game-nav-card.game-cs2::before {
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(0.92) saturate(1.05);
+  opacity: 0.86;
+}
+
+.game-nav-card.game-cs2::after {
+  background: linear-gradient(90deg, rgba(5, 5, 5, 0.18), rgba(5, 5, 5, 0.06));
+}
+
+.game-nav-card.game-cs2 span {
+  opacity: 0;
 }
 
 .game-nav-card.game-f1 {
