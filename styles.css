@@ -3057,7 +3057,7 @@ footer {
 
 .f1-status-actions {
   position: absolute;
-  top: clamp(8.5rem, 14vw, 12.5rem);
+  top: clamp(11rem, 16vw, 15rem);
   right: clamp(1.25rem, 6vw, 7rem);
   z-index: 2;
   display: flex;
