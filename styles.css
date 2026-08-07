@@ -2355,13 +2355,6 @@ footer {
   box-shadow: inset 3px 0 0 rgba(247, 214, 134, 0.72);
 }
 
-.f1-history-table tbody tr:nth-child(1),
-.f1-history-table tbody tr:nth-child(2),
-.f1-history-table tbody tr:nth-child(3) {
-  background:
-    linear-gradient(90deg, rgba(214, 163, 58, 0.18), rgba(214, 163, 58, 0.035) 40%, rgba(255, 255, 255, 0.018));
-}
-
 .f1-history-table:not(.compact) tbody tr.clan-driver {
   background:
     linear-gradient(90deg, rgba(247, 214, 134, 0.28), rgba(255, 255, 255, 0.04) 48%, transparent);
@@ -2380,7 +2373,7 @@ footer {
   place-items: center;
   width: 1.55rem;
   height: 1.55rem;
-  margin-right: 0.45rem;
+  margin-left: 0.45rem;
   border: 1px solid rgba(247, 214, 134, 0.48);
   border-radius: 999px;
   background:
@@ -2424,22 +2417,6 @@ footer {
 
 .f1-history-table tbody td:first-child {
   color: #fff7e5;
-}
-
-.f1-history-table tbody tr:nth-child(1) td:first-child::before {
-  border-color: rgba(255, 212, 85, 0.8);
-  background: linear-gradient(135deg, #ffe486, #b98516);
-  box-shadow: 0 0 1.2rem rgba(255, 212, 85, 0.28);
-}
-
-.f1-history-table tbody tr:nth-child(2) td:first-child::before {
-  border-color: rgba(232, 232, 232, 0.72);
-  background: linear-gradient(135deg, #f2f2f2, #8f949a);
-}
-
-.f1-history-table tbody tr:nth-child(3) td:first-child::before {
-  border-color: rgba(212, 129, 55, 0.78);
-  background: linear-gradient(135deg, #e4a15f, #7d3f1c);
 }
 
 .f1-history-table:not(.compact) td:nth-child(3),
