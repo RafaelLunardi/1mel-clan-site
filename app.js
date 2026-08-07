@@ -199,8 +199,9 @@ const cs2Members = [
     tag: "Base",
     score: 74,
     medals: [
-      ["Prata", "Consistencia", "Fecha a retaguarda e segura a troca quando precisa."],
-      ["Bronze", "Presenca", "Sempre aparece no lugar certo da rodada."]
+      ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-gabriel-season-7-medal.png"],
+      ["Season 2", "Season 2", "Medalha da Season 2.", "assets/cs2-gabriel-season-2-medal.png"],
+      ["Season 3", "Season 3", "Medalha da Season 3.", "assets/cs2-gabriel-season-3-medal.png"]
     ]
   }
 ];
