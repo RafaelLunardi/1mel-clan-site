@@ -3055,6 +3055,36 @@ footer {
   background: #d6a33a;
 }
 
+.f1-status-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  min-height: 2.8rem;
+  border: 1px solid rgba(214, 163, 58, 0.48);
+  border-radius: 4px;
+  padding: 0 0.95rem;
+  background:
+    linear-gradient(135deg, rgba(214, 163, 58, 0.18), rgba(0, 0, 0, 0.38)),
+    rgba(5, 5, 5, 0.64);
+  color: #f7d686;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.26);
+}
+
+.f1-status-back-button:hover {
+  border-color: rgba(255, 224, 143, 0.86);
+  color: #fff7e5;
+}
+
+.f1-status-back-button span {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
 .f1-status-strip {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
