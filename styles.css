@@ -1286,9 +1286,9 @@ footer {
 }
 
 .f1-hero {
-  min-height: clamp(22rem, 31vw, 30rem);
-  padding-top: clamp(7rem, 8vw, 8.5rem);
-  padding-bottom: clamp(1.4rem, 3vw, 2.2rem);
+  min-height: clamp(19rem, 26vw, 25rem);
+  padding-top: clamp(6.2rem, 7vw, 7.6rem);
+  padding-bottom: clamp(0.8rem, 2vw, 1.3rem);
 }
 
 .f1-hero h1 {
@@ -1319,7 +1319,7 @@ footer {
 .f1-hero-cars {
   position: absolute;
   left: 50%;
-  top: 52%;
+  top: 50%;
   z-index: 2;
   width: min(47rem, 48vw);
   max-height: 18rem;
@@ -1360,7 +1360,7 @@ footer {
 .game-trophy-hero > .f1-hero-actions {
   position: absolute;
   right: clamp(1.5rem, 7vw, 7rem);
-  bottom: clamp(5rem, 8vw, 7rem);
+  bottom: clamp(3.2rem, 5.6vw, 5rem);
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
