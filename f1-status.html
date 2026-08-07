@@ -9,7 +9,7 @@
     <meta property="og:type" content="website">
     <title>Status F1 | 1-MEL</title>
     <link rel="preconnect" href="https://avatars.fastly.steamstatic.com">
-    <link rel="stylesheet" href="styles.css?v=f1-status-square-details-20260807">
+    <link rel="stylesheet" href="styles.css?v=f1-status-fixed-modal-20260807">
     <script defer src="app.js"></script>
   </head>
   <body data-page="f1-status">
@@ -49,6 +49,7 @@
           <h1>Status</h1>
         </div>
 
+        <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-closed" checked>
         <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-vitorias">
         <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-podios">
         <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-poles">
@@ -109,7 +110,9 @@
         </div>
 
         <div class="f1-status-detail-cards" aria-live="polite">
+          <label class="f1-status-backdrop" for="status-closed" aria-label="Fechar detalhe"></label>
           <article class="f1-status-detail-card detail-vitorias">
+            <label class="f1-status-close" for="status-closed" aria-label="Fechar">x</label>
             <span>Vitorias</span>
             <strong>0</strong>
             <div class="f1-status-detail-list">
@@ -118,6 +121,7 @@
             </div>
           </article>
           <article class="f1-status-detail-card detail-podios">
+            <label class="f1-status-close" for="status-closed" aria-label="Fechar">x</label>
             <span>Podios</span>
             <strong>1</strong>
             <div class="f1-status-detail-list">
@@ -126,6 +130,7 @@
             </div>
           </article>
           <article class="f1-status-detail-card detail-poles">
+            <label class="f1-status-close" for="status-closed" aria-label="Fechar">x</label>
             <span>Poles</span>
             <strong>0</strong>
             <div class="f1-status-detail-list">
@@ -134,6 +139,7 @@
             </div>
           </article>
           <article class="f1-status-detail-card detail-vr">
+            <label class="f1-status-close" for="status-closed" aria-label="Fechar">x</label>
             <span>Voltas mais rapidas</span>
             <strong>1</strong>
             <div class="f1-status-detail-list">
@@ -142,6 +148,7 @@
             </div>
           </article>
           <article class="f1-status-detail-card detail-piloto-dia">
+            <label class="f1-status-close" for="status-closed" aria-label="Fechar">x</label>
             <span>Piloto do dia</span>
             <strong>1</strong>
             <div class="f1-status-detail-list">
@@ -150,6 +157,7 @@
             </div>
           </article>
           <article class="f1-status-detail-card detail-etapas">
+            <label class="f1-status-close" for="status-closed" aria-label="Fechar">x</label>
             <span>Etapas disputadas</span>
             <strong>16</strong>
             <div class="f1-status-detail-list">

@@ -3139,12 +3139,31 @@ footer {
 }
 
 .f1-status-detail-cards {
-  max-width: 25rem;
-  min-height: 0;
-  margin: 1.45rem auto 0;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.f1-status-backdrop {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(214, 163, 58, 0.12), transparent 22rem),
+    rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(3px);
 }
 
 .f1-status-detail-card {
+  position: relative;
+  z-index: 1;
   display: none;
   width: min(25rem, 100%);
   min-height: 25rem;
@@ -3156,6 +3175,30 @@ footer {
     rgba(5, 5, 5, 0.78);
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.34);
   text-align: center;
+}
+
+.f1-status-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(214, 163, 58, 0.42);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.38);
+  color: #f7d686;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 950;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.f1-status-close:hover {
+  border-color: rgba(255, 224, 143, 0.88);
+  color: #fff7e5;
 }
 
 .f1-status-detail-card span {
@@ -3228,6 +3271,16 @@ footer {
 #status-piloto-dia:checked ~ .f1-status-detail-cards .detail-piloto-dia,
 #status-etapas:checked ~ .f1-status-detail-cards .detail-etapas {
   display: block;
+}
+
+#status-vitorias:checked ~ .f1-status-detail-cards,
+#status-podios:checked ~ .f1-status-detail-cards,
+#status-poles:checked ~ .f1-status-detail-cards,
+#status-vr:checked ~ .f1-status-detail-cards,
+#status-piloto-dia:checked ~ .f1-status-detail-cards,
+#status-etapas:checked ~ .f1-status-detail-cards {
+  display: grid;
+  pointer-events: auto;
 }
 
 .f1-status-divider {
