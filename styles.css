@@ -1371,6 +1371,61 @@ footer {
   border-top: 1px solid rgba(214, 163, 58, 0.24);
 }
 
+.f1-display-cell.empty {
+  align-content: end;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(247, 214, 134, 0.12), transparent 6.8rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.022), rgba(0, 0, 0, 0.28));
+}
+
+.f1-display-cell.empty::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8.8rem;
+  width: 6.2rem;
+  height: 0.35rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(214, 163, 58, 0.2);
+  box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.42);
+}
+
+.f1-empty-plaque {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: min(8.4rem, 100%);
+  min-height: 4.8rem;
+  margin: 0 auto;
+  border: 1px solid rgba(214, 163, 58, 0.22);
+  border-top: 0.3rem solid rgba(214, 163, 58, 0.52);
+  padding: 0.8rem 0.45rem 0.65rem;
+  background:
+    linear-gradient(180deg, rgba(42, 37, 27, 0.62), rgba(8, 7, 6, 0.82)),
+    linear-gradient(90deg, rgba(247, 214, 134, 0.1), transparent);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.36);
+}
+
+.f1-empty-plaque span,
+.f1-empty-plaque small {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.f1-empty-plaque span {
+  color: #f7d686;
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.f1-empty-plaque small {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 850;
+}
+
 .f1-spotlight {
   position: absolute;
   top: 0.35rem;
