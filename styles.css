@@ -2385,6 +2385,23 @@ footer {
   vertical-align: -0.22rem;
 }
 
+.clan-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #fff1b0;
+  font-weight: 950;
+  text-shadow: 0 0 0.9rem rgba(247, 214, 134, 0.28);
+}
+
+.clan-name .bee-mark {
+  width: 1.32rem;
+  height: 1.32rem;
+  margin-left: 0.15rem;
+  font-size: 0.7rem;
+  vertical-align: -0.16rem;
+}
+
 .f1-history-table td {
   color: #d2cab8;
   font-size: 0.88rem;
