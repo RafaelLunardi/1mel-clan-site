@@ -1396,8 +1396,7 @@ footer {
 .f1-hero::after {
   background:
     linear-gradient(90deg, rgba(5, 5, 5, 0.96), rgba(5, 5, 5, 0.72) 46%, rgba(5, 5, 5, 0.44)),
-    radial-gradient(circle at 15% 16%, rgba(214, 163, 58, 0.14), transparent 30rem),
-    linear-gradient(180deg, transparent 0 82%, rgba(214, 163, 58, 0.46) 82% 82.3%, transparent 82.3%);
+    radial-gradient(circle at 15% 16%, rgba(214, 163, 58, 0.14), transparent 30rem);
 }
 
 .f1-hero::before {
@@ -1458,8 +1457,7 @@ footer {
 
 .f1-museum::after {
   background:
-    linear-gradient(90deg, rgba(214, 163, 58, 0.16) 0 1px, transparent 1px 100%),
-    linear-gradient(180deg, transparent 0 47%, rgba(214, 163, 58, 0.3) 47% 47.2%, transparent 47.2%);
+    linear-gradient(90deg, rgba(214, 163, 58, 0.16) 0 1px, transparent 1px 100%);
   opacity: 0.42;
 }
 
