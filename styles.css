@@ -1309,10 +1309,10 @@ footer {
 .game-trophy-hero > .f1-hero-car {
   position: absolute;
   right: clamp(1.2rem, 5vw, 5rem);
-  top: clamp(6.5rem, 8vw, 8rem);
+  top: clamp(7.2rem, 9vw, 9rem);
   z-index: 3;
-  width: min(37rem, 43vw);
-  max-height: 12.5rem;
+  width: min(25rem, 30vw);
+  max-height: 8.5rem;
   object-fit: contain;
   object-position: right center;
   opacity: 0.95;
