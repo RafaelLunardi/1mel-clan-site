@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #08090b;
   --panel: #111319;
   --panel-2: #171a22;
@@ -33,7 +33,6 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
 }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -45,7 +44,6 @@ body {
   white-space: nowrap;
   border: 0;
 }
-
 a {
   color: inherit;
   text-decoration: none;
@@ -603,6 +601,261 @@ footer {
 
 .timeline-list .event {
   min-height: 9rem;
+}
+
+.agenda-hero {
+  min-height: 34vh;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(214, 163, 58, 0.12), transparent 22rem),
+    linear-gradient(135deg, rgba(255, 194, 51, 0.08), transparent 62%);
+}
+
+.agenda-hero h1 {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.race-agenda {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.4rem, 5vw, 4.5rem) clamp(1rem, 4vw, 3.5rem) clamp(2.5rem, 5vw, 4rem);
+  background:
+    radial-gradient(circle at 13% 18%, rgba(214, 163, 58, 0.1), transparent 21rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(0, 0, 0, 0.16));
+}
+
+.race-agenda-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.7rem;
+}
+
+.race-agenda-heading h2 {
+  margin-top: 0.35rem;
+  color: #f7f2df;
+  font-size: clamp(2rem, 4.4vw, 4.6rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.race-agenda-heading h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  margin-top: 1.05rem;
+  background: var(--honey);
+}
+
+.race-agenda-mark {
+  display: grid;
+  place-items: center;
+  width: 4.8rem;
+  color: var(--honey);
+}
+
+.race-agenda-mark svg {
+  width: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.race-event-list {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.race-event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7.6rem 6.4rem 6.6rem minmax(0, 1fr) minmax(12rem, 18rem);
+  gap: clamp(0.9rem, 2vw, 1.7rem);
+  align-items: center;
+  min-height: 7.9rem;
+  border: 1px solid rgba(214, 163, 58, 0.3);
+  border-right-color: rgba(214, 163, 58, 0.82);
+  border-radius: 6px;
+  padding: 1rem 1.4rem;
+  background:
+    linear-gradient(135deg, rgba(214, 163, 58, 0.08), transparent 46%),
+    rgba(0, 0, 0, 0.34);
+  box-shadow: inset 3px 0 0 rgba(255, 204, 35, 0.78);
+}
+
+.race-event::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 7.8rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--honey));
+}
+
+.race-event.current {
+  border-color: rgba(255, 204, 35, 0.5);
+  background:
+    linear-gradient(135deg, rgba(255, 204, 35, 0.13), transparent 45%),
+    rgba(0, 0, 0, 0.42);
+}
+
+.race-date,
+.race-weekday,
+.race-icon,
+.race-time {
+  border-right: 1px solid rgba(247, 240, 221, 0.13);
+}
+
+.race-date {
+  display: grid;
+  place-items: center;
+  min-height: 5rem;
+  color: var(--honey);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.race-date strong {
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  line-height: 0.82;
+}
+
+.race-date span {
+  font-size: 1rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.race-weekday {
+  color: rgba(247, 240, 221, 0.48);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.race-icon {
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  width: 4.3rem;
+  height: 4.3rem;
+  border: 1px solid var(--honey);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  color: var(--honey);
+  font-weight: 950;
+  letter-spacing: 0.05em;
+}
+
+.race-copy h3 {
+  margin: 0 0 0.35rem;
+  color: #f7f2df;
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.race-copy p {
+  margin: 0;
+  color: #a8a095;
+}
+
+.race-time {
+  min-height: 4.8rem;
+  border-left: 1px solid rgba(247, 240, 221, 0.11);
+  border-right: 0;
+  padding-left: 2rem;
+}
+
+.race-time strong {
+  display: block;
+  color: var(--honey);
+  font-size: 1.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.race-time span {
+  display: block;
+  margin-top: 0.55rem;
+  color: #a8a095;
+}
+
+.race-agenda-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(214, 163, 58, 0.35);
+  padding-top: 1.25rem;
+  color: #a8a095;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.race-agenda-footer strong {
+  color: var(--honey);
+}
+
+@media (max-width: 920px) {
+  .race-agenda-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .race-event {
+    grid-template-columns: 5.7rem 4.2rem minmax(0, 1fr);
+    gap: 0.9rem;
+  }
+
+  .race-icon {
+    display: none;
+  }
+
+  .race-time {
+    grid-column: 3;
+    min-height: auto;
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .race-event {
+    grid-template-columns: 4.8rem minmax(0, 1fr);
+    padding: 0.9rem;
+  }
+
+  .race-weekday {
+    grid-row: 2;
+    border-right: 0;
+    font-size: 0.8rem;
+  }
+
+  .race-copy,
+  .race-time {
+    grid-column: 2;
+  }
+
+  .race-copy h3 {
+    font-size: 1.05rem;
+  }
+
+  .race-time strong {
+    font-size: 0.92rem;
+  }
+
+  .race-agenda-footer {
+    flex-direction: column;
+  }
 }
 
 .schedule-grid,
@@ -1742,7 +1995,7 @@ footer {
 }
 
 .f1-object-laurel::before {
-  content: "★";
+  content: "â˜…";
   position: absolute;
   inset: 1.4rem;
   display: grid;

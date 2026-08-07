@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Agenda do clã 1-MEL com próximos eventos, corridas, treinos e noites competitivas.">
+    <meta name="description" content="Agenda do clã 1-MEL com o calendário de corridas dos campeonatos.">
     <meta property="og:title" content="Agenda 1-MEL">
-    <meta property="og:description" content="Calendário oficial do 1-MEL para CS2, Rocket League e F1.">
+    <meta property="og:description" content="Calendário oficial de corridas da 1-MEL.">
     <meta property="og:type" content="website">
     <title>Agenda | 1-MEL</title>
     <link rel="preconnect" href="https://avatars.fastly.steamstatic.com">
-    <link rel="stylesheet" href="styles.css?v=brand-wordmark-20260807">
+    <link rel="stylesheet" href="styles.css?v=race-agenda-20260807">
     <script defer src="app.js"></script>
   </head>
   <body data-page="agenda">
     <header class="site-header blog-header">
-      <a class="brand blog-brand" href="index.html" aria-label="Voltar ao inicio">
+      <a class="brand blog-brand" href="index.html" aria-label="Voltar ao início">
         <span class="blog-brand-mark" aria-hidden="true">
           <svg viewBox="0 0 80 80" role="img">
             <path d="M40 5 70 22v36L40 75 10 58V22Z"></path>
@@ -30,7 +30,7 @@
           <small>Racing Division</small>
         </span>
       </a>
-      <nav aria-label="Navegacao principal">
+      <nav aria-label="Navegação principal">
         <a href="index.html">Principal</a>
         <a aria-current="page" href="agenda.html">Agenda</a>
         <a href="trofeus-cs2.html">Sala de troféus</a>
@@ -42,29 +42,46 @@
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero agenda-hero">
         <p class="eyebrow">Calendário oficial</p>
         <h1>Agenda</h1>
-        <p class="intro">Corridas, filas, treinos e resenhas organizadas para ninguém fingir que não viu o horário.</p>
+        <p class="intro">Compromissos do clã nos campeonatos de F1 da StopAndGo.</p>
       </section>
 
-      <section class="agenda page-section">
-        <div class="section-heading">
-          <p class="eyebrow">Próximos eventos</p>
-          <h2>Programação da colmeia</h2>
+      <section class="agenda page-section race-agenda">
+        <div class="race-agenda-heading">
+          <div>
+            <p class="eyebrow">Próximas corridas</p>
+            <h2>Calendário dos campeonatos</h2>
+          </div>
+          <span class="race-agenda-mark" aria-hidden="true">
+            <svg viewBox="0 0 80 80" role="img">
+              <path d="M40 5 70 22v36L40 75 10 58V22Z"></path>
+              <path d="M26 25h28v26H26z"></path>
+              <path d="M32 20v10M48 20v10M26 34h28M33 41h4M43 41h4M33 48h4M43 48h4"></path>
+            </svg>
+          </span>
         </div>
-        <div class="event-list timeline-list" id="events"></div>
-      </section>
-
-      <section class="section-grid">
-        <div class="section-heading">
-          <p class="eyebrow">Rotina</p>
-          <h2>Quadro semanal</h2>
+        <div class="race-event-list" aria-label="Calendário de corridas dos campeonatos">
+          <article class="race-event current"><div class="race-date"><strong>09</strong><span>Ago</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">F1</div><div class="race-copy"><h3>GP dos Países Baixos</h3><p>StopAndGo Start 1 · Etapa 07 · Zandvoort</p></div><div class="race-time"><strong>A definir</strong><span>Em andamento</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>03</strong><span>Set</span></div><div class="race-weekday">Qui</div><div class="race-icon" aria-hidden="true">F6</div><div class="race-copy"><h3>Monza</h3><p>StopAndGo F6 · Etapa 01 · Itália</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>06</strong><span>Set</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">ST</div><div class="race-copy"><h3>Monza</h3><p>StopAndGo Start · Etapa 01 · Itália</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>10</strong><span>Set</span></div><div class="race-weekday">Qui</div><div class="race-icon" aria-hidden="true">F6</div><div class="race-copy"><h3>Shanghai Circuit</h3><p>StopAndGo F6 · Etapa 02 · China</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>13</strong><span>Set</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">ST</div><div class="race-copy"><h3>Shanghai Circuit</h3><p>StopAndGo Start · Etapa 02 · China</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>17</strong><span>Set</span></div><div class="race-weekday">Qui</div><div class="race-icon" aria-hidden="true">F6</div><div class="race-copy"><h3>Madring</h3><p>StopAndGo F6 · Etapa 03 · Madrid</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>20</strong><span>Set</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">ST</div><div class="race-copy"><h3>Madring</h3><p>StopAndGo Start · Etapa 03 · Madrid</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>24</strong><span>Set</span></div><div class="race-weekday">Qui</div><div class="race-icon" aria-hidden="true">F6</div><div class="race-copy"><h3>Baku City Circuit</h3><p>StopAndGo F6 · Etapa 04 · Azerbaijão</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>27</strong><span>Set</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">ST</div><div class="race-copy"><h3>Baku City Circuit</h3><p>StopAndGo Start · Etapa 04 · Azerbaijão</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>01</strong><span>Out</span></div><div class="race-weekday">Qui</div><div class="race-icon" aria-hidden="true">F6</div><div class="race-copy"><h3>International Autodrome</h3><p>StopAndGo F6 · Etapa 05 · Miami</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>04</strong><span>Out</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">ST</div><div class="race-copy"><h3>International Autodrome</h3><p>StopAndGo Start · Etapa 05 · Miami</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>08</strong><span>Out</span></div><div class="race-weekday">Qui</div><div class="race-icon" aria-hidden="true">F6</div><div class="race-copy"><h3>Marina Bay</h3><p>StopAndGo F6 · Etapa 06 · Singapura</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>11</strong><span>Out</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">ST</div><div class="race-copy"><h3>Marina Bay</h3><p>StopAndGo Start · Etapa 06 · Singapura</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>15</strong><span>Out</span></div><div class="race-weekday">Qui</div><div class="race-icon" aria-hidden="true">F6</div><div class="race-copy"><h3>Circuit of the Americas</h3><p>StopAndGo F6 · Etapa 07 · Austin</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
+          <article class="race-event"><div class="race-date"><strong>18</strong><span>Out</span></div><div class="race-weekday">Dom</div><div class="race-icon" aria-hidden="true">ST</div><div class="race-copy"><h3>Circuit of the Americas</h3><p>StopAndGo Start · Etapa 07 · Austin</p></div><div class="race-time"><strong>A definir</strong><span>Não iniciado</span></div></article>
         </div>
-        <div class="schedule-grid">
-          <article class="stat-card"><span class="card-kicker">Segunda</span><strong>CS2</strong><span>Map pool, demo curta e fila competitiva.</span></article>
-          <article class="stat-card"><span class="card-kicker">Quarta</span><strong>RL</strong><span>Scrims e treino de rotação.</span></article>
-          <article class="stat-card"><span class="card-kicker">Domingo</span><strong>F1</strong><span>Etapa oficial ou treino longo.</span></article>
+        <div class="race-agenda-footer">
+          <span>Fuso horário: BRT (UTC-3)</span>
+          <strong>Agenda sujeita a alterações</strong>
         </div>
       </section>
     </main>
