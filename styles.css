@@ -2362,11 +2362,34 @@ footer {
     linear-gradient(90deg, rgba(214, 163, 58, 0.18), rgba(214, 163, 58, 0.035) 40%, rgba(255, 255, 255, 0.018));
 }
 
-.f1-history-table:not(.compact) tbody tr:nth-child(6),
-.f1-history-table:not(.compact) tbody tr:nth-child(19) {
+.f1-history-table:not(.compact) tbody tr.clan-driver {
   background:
-    linear-gradient(90deg, rgba(247, 214, 134, 0.2), rgba(255, 255, 255, 0.025) 46%, transparent);
-  box-shadow: inset 3px 0 0 rgba(247, 214, 134, 0.9);
+    linear-gradient(90deg, rgba(247, 214, 134, 0.28), rgba(255, 255, 255, 0.04) 48%, transparent);
+  box-shadow:
+    inset 3px 0 0 rgba(247, 214, 134, 0.95),
+    inset 0 0 0 1px rgba(247, 214, 134, 0.06);
+}
+
+.f1-history-table:not(.compact) tbody tr.clan-driver th {
+  color: #fff1b0;
+  text-shadow: 0 0 1rem rgba(247, 214, 134, 0.34);
+}
+
+.bee-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-right: 0.45rem;
+  border: 1px solid rgba(247, 214, 134, 0.48);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.5), transparent 38%),
+    linear-gradient(135deg, rgba(247, 214, 134, 0.34), rgba(0, 0, 0, 0.26));
+  font-size: 0.78rem;
+  line-height: 1;
+  box-shadow: 0 0 1rem rgba(247, 214, 134, 0.24);
+  vertical-align: -0.22rem;
 }
 
 .f1-history-table td {
