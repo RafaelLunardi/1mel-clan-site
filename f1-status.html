@@ -9,7 +9,7 @@
     <meta property="og:type" content="website">
     <title>Status F1 | 1-MEL</title>
     <link rel="preconnect" href="https://avatars.fastly.steamstatic.com">
-    <link rel="stylesheet" href="styles.css?v=f1-status-driver-day-20260807">
+    <link rel="stylesheet" href="styles.css?v=f1-status-detail-cards-20260807">
     <script defer src="app.js"></script>
   </head>
   <body data-page="f1-status">
@@ -49,16 +49,23 @@
           <h1>Status</h1>
         </div>
 
+        <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-vitorias">
+        <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-podios">
+        <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-poles">
+        <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-vr">
+        <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-piloto-dia">
+        <input class="f1-status-radio" type="radio" name="f1-status-detail" id="status-etapas">
+
         <div class="f1-status-strip" aria-label="Status geral da 1-MEL na F1">
-          <article>
+          <label for="status-vitorias">
             <svg viewBox="0 0 48 48" aria-hidden="true">
               <path d="M10 36V10l5 3 5-3 5 3 5-3 8 4v16l-8-4-5 3-5-3-5 3-5-3"></path>
               <path d="M15 13v16M25 13v16M38 14v16"></path>
             </svg>
             <span>Vitorias</span>
             <strong>0</strong>
-          </article>
-          <article>
+          </label>
+          <label for="status-podios">
             <svg viewBox="0 0 48 48" aria-hidden="true">
               <path d="M17 14h14M24 8v6"></path>
               <circle cx="24" cy="27" r="12"></circle>
@@ -66,31 +73,31 @@
             </svg>
             <span>Podios</span>
             <strong>1</strong>
-          </article>
-          <article>
+          </label>
+          <label for="status-poles">
             <svg viewBox="0 0 48 48" aria-hidden="true">
               <path d="M27 4 12 27h11l-2 17 15-24H25l2-16Z"></path>
             </svg>
             <span>Poles</span>
             <strong>0</strong>
-          </article>
-          <article>
+          </label>
+          <label for="status-vr">
             <svg viewBox="0 0 48 48" aria-hidden="true">
               <path d="M14 17V9h20v8c0 8-4 13-10 15-6-2-10-7-10-15Z"></path>
               <path d="M14 15H8c0 7 3 11 9 12M34 15h6c0 7-3 11-9 12M24 32v8M17 40h14"></path>
             </svg>
             <span>Voltas mais rapidas</span>
             <strong>1</strong>
-          </article>
-          <article>
+          </label>
+          <label for="status-piloto-dia">
             <svg viewBox="0 0 48 48" aria-hidden="true">
               <path d="M12 34h8v8h-8ZM20 24h8v18h-8ZM28 30h8v12h-8Z"></path>
               <path d="M24 10v10M19 15h10"></path>
             </svg>
             <span>Piloto do dia</span>
             <strong>1</strong>
-          </article>
-          <article>
+          </label>
+          <label for="status-etapas">
             <svg viewBox="0 0 48 48" aria-hidden="true">
               <path d="M15 35c-6-6-6-16 0-22M33 13c6 6 6 16 0 22"></path>
               <path d="M12 20c-4 1-6 4-7 8M36 20c4 1 6 4 7 8M16 34l-7 4M32 34l7 4"></path>
@@ -98,6 +105,39 @@
             </svg>
             <span>Etapas disputadas</span>
             <strong>16</strong>
+          </label>
+        </div>
+
+        <div class="f1-status-detail-cards" aria-live="polite">
+          <article class="f1-status-detail-card detail-vitorias">
+            <span>Vitorias</span>
+            <strong>0</strong>
+            <p>A 1-MEL ainda busca a primeira vitoria na StopAndGo Start 1.</p>
+          </article>
+          <article class="f1-status-detail-card detail-podios">
+            <span>Podios</span>
+            <strong>1</strong>
+            <p>Fernando Ribeiro terminou em P3 no GP da Belgica.</p>
+          </article>
+          <article class="f1-status-detail-card detail-poles">
+            <span>Poles</span>
+            <strong>0</strong>
+            <p>Melhores largadas do clan: Rafael P4 na Austria/Catalunha e Fernando P4 na Belgica.</p>
+          </article>
+          <article class="f1-status-detail-card detail-vr">
+            <span>Voltas mais rapidas</span>
+            <strong>1</strong>
+            <p>Rafael Marques marcou 1:06.840 no GP da Austria.</p>
+          </article>
+          <article class="f1-status-detail-card detail-piloto-dia">
+            <span>Piloto do dia</span>
+            <strong>1</strong>
+            <p>Rafael Marques foi destaque oficial no GP do Japao.</p>
+          </article>
+          <article class="f1-status-detail-card detail-etapas">
+            <span>Etapas disputadas</span>
+            <strong>16</strong>
+            <p>Soma das participacoes de Rafael Marques, Fernando Ribeiro e Lucas Zana ate a etapa 06.</p>
           </article>
         </div>
 
