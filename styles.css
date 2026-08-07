@@ -1303,10 +1303,10 @@ footer {
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.55));
 }
 
-.cs2-title-logo {
+.cs2-title-mark {
   display: block;
-  width: min(33rem, 70vw);
-  max-height: clamp(4rem, 10vw, 6.8rem);
+  width: min(36rem, 72vw);
+  max-height: clamp(6rem, 14vw, 10rem);
   object-fit: contain;
   object-position: left center;
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.58));
