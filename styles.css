@@ -1297,6 +1297,16 @@ footer {
   line-height: 0.86;
 }
 
+.f1-championship-hero h1 {
+  max-width: 50rem;
+  color: #fff7e5;
+  font-size: clamp(3.8rem, 9vw, 8.4rem);
+}
+
+.f1-championship-hero .intro {
+  max-width: 38rem;
+}
+
 .f1-title-logo {
   display: block;
   width: min(39rem, 72vw);
