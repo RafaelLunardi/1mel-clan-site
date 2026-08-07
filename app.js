@@ -163,8 +163,10 @@ const cs2Members = [
     tag: "Clutch",
     score: 88,
     medals: [
-      ["MVP", "Sangue frio", "Encaixa a call e vira round que parecia perdido."],
-      ["Ouro", "Retake", "Volta no bomb com paciencia e mira quente."]
+      ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-felbyz-season-7-medal.png"],
+      ["Season 2", "Season 2", "Medalha da Season 2.", "assets/cs2-felbyz-season-2-medal.png"],
+      ["Season 3", "Season 3", "Medalha da Season 3.", "assets/cs2-felbyz-season-3-medal.png"],
+      ["Season 4", "Season 4", "Medalha da Season 4.", "assets/cs2-felbyz-season-4-medal.png"]
     ]
   },
   {
