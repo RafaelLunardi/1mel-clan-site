@@ -154,8 +154,10 @@ const cs2Members = [
     tag: "Controle",
     score: 82,
     medals: [
-      ["Ouro", "Calma no caos", "Segura o mapa e deixa a resenha competitiva no ponto."],
-      ["Bronze", "Utilidade", "Smoke e flash entrando no tempo certo."]
+      ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-zana-season-7-medal.png"],
+      ["Season 2", "Season 2", "Medalha da Season 2.", "assets/cs2-zana-season-2-medal.png"],
+      ["Season 3", "Season 3", "Medalha da Season 3.", "assets/cs2-zana-season-3-medal.png"],
+      ["Season 4", "Season 4", "Medalha da Season 4.", "assets/cs2-zana-season-4-medal.png"]
     ]
   },
   {
