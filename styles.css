@@ -716,6 +716,15 @@ footer {
   --game-bg: url("assets/f1-card-formula.png");
 }
 
+.game-nav-card.game-f1::before {
+  filter: brightness(0.86) saturate(1.08);
+  opacity: 0.78;
+}
+
+.game-nav-card.game-f1::after {
+  background: linear-gradient(90deg, rgba(5, 5, 5, 0.48), rgba(5, 5, 5, 0.18));
+}
+
 .game-nav-card.game-f1 span {
   opacity: 0;
 }
