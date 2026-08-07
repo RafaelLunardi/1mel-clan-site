@@ -1044,8 +1044,8 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 92px auto;
-  filter: brightness(0.92) saturate(1.05);
-  opacity: 0.86;
+  filter: brightness(1.18) saturate(1.16);
+  opacity: 0.95;
 }
 
 .game-nav-card.game-cs2::after {
@@ -1062,8 +1062,8 @@ footer {
 
 .game-nav-card.game-f1::before {
   background-size: 132% auto;
-  filter: brightness(0.86) saturate(1.08);
-  opacity: 0.78;
+  filter: brightness(1.05) saturate(1.18);
+  opacity: 0.9;
 }
 
 .game-nav-card.game-f1::after {
@@ -1080,8 +1080,8 @@ footer {
 
 .game-nav-card.game-rl::before {
   background-size: 132% auto;
-  filter: brightness(0.82) saturate(1.08);
-  opacity: 0.82;
+  filter: brightness(1.02) saturate(1.18);
+  opacity: 0.92;
 }
 
 .game-nav-card.game-rl::after {
