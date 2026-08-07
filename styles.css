@@ -1043,7 +1043,7 @@ footer {
 }
 
 .game-nav-card.game-cs2::before {
-  background-size: 112% auto;
+  background-size: 132% auto;
   filter: brightness(0.92) saturate(1.05);
   opacity: 0.86;
 }
