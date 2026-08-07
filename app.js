@@ -131,7 +131,7 @@ const cs2Members = [
     tag: "Lider",
     score: 94,
     medals: [
-      ["Ouro", "Clutch decisivo", "Resolve round complicado quando a call pesa."],
+      ["Season 7", "Clutch decisivo", "Resolve round complicado quando a call pesa.", "assets/cs2-season-7-medal.png"],
       ["MVP", "Entrada limpa", "Abre espaco e transforma vantagem pequena em round ganho."],
       ["Diamante", "Capitao da call", "Mantem a colmeia junta nos mapas longos."]
     ]
@@ -210,10 +210,7 @@ const renderCs2MemberPanel = (selectedId = "all") => {
           <thead>
             <tr>
               <th>Membro</th>
-              <th>Medalha 1</th>
-              <th>Medalha 2</th>
-              <th>Medalha 3</th>
-              <th>Pontos</th>
+              <th>Medalhas</th>
             </tr>
           </thead>
           <tbody>
@@ -223,10 +220,14 @@ const renderCs2MemberPanel = (selectedId = "all") => {
                   <strong>${member.name}</strong>
                   <span>${member.tag}</span>
                 </th>
-                <td>${member.medals[0]?.[0] || ""}</td>
-                <td>${member.medals[1]?.[0] || ""}</td>
-                <td>${member.medals[2]?.[0] || ""}</td>
-                <td><strong>${member.score}</strong></td>
+                <td>
+                  <div class="cs2-sheet-medals">
+                    ${member.medals.map(([tier, title, , image]) => image
+                      ? `<span class="cs2-sheet-medal image-medal"><img src="${image}" alt="${title}"></span>`
+                      : `<span class="cs2-sheet-medal">${tier}</span>`
+                    ).join("")}
+                  </div>
+                </td>
               </tr>
             `).join("")}
           </tbody>

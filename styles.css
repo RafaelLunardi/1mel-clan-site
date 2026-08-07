@@ -829,13 +829,15 @@ footer {
 
 .cs2-medal-sheet table {
   width: 100%;
-  min-width: 54rem;
-  border-collapse: collapse;
+  min-width: 42rem;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 .cs2-medal-sheet th,
 .cs2-medal-sheet td {
-  border: 1px solid rgba(247, 240, 221, 0.1);
+  border: 0;
+  border-bottom: 1px solid rgba(247, 240, 221, 0.1);
   padding: 0.95rem 1rem;
   text-align: left;
 }
@@ -849,7 +851,7 @@ footer {
 
 .cs2-medal-sheet tbody th {
   width: 16rem;
-  background: rgba(0, 0, 0, 0.18);
+  background: transparent;
 }
 
 .cs2-medal-sheet tbody th strong,
@@ -870,6 +872,46 @@ footer {
   color: #f7d686;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.cs2-medal-sheet tbody tr:last-child th,
+.cs2-medal-sheet tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.cs2-sheet-medals {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 4.6rem;
+}
+
+.cs2-sheet-medal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 5rem;
+  min-height: 2.4rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(214, 163, 58, 0.32);
+  border-radius: 8px;
+  background: rgba(214, 163, 58, 0.08);
+  color: #f7d686;
+}
+
+.cs2-sheet-medal.image-medal {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.cs2-sheet-medal img {
+  display: block;
+  width: 5.6rem;
+  height: auto;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.34));
 }
 
 .game-trophy-hero {
