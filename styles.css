@@ -723,7 +723,7 @@ footer {
 .cs2-member-hub {
   position: relative;
   z-index: 3;
-  margin: -3.2rem clamp(1rem, 4vw, 3.5rem) 0;
+  margin: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3.5rem) 0;
   padding: 1rem;
   border: 1px solid rgba(214, 163, 58, 0.24);
   border-radius: 8px;
@@ -768,34 +768,15 @@ footer {
   gap: 0.85rem;
 }
 
-.cs2-comparison {
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.cs2-compare-card,
 .cs2-medal-card {
   border: 1px solid rgba(247, 240, 221, 0.12);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.035);
 }
 
-.cs2-compare-card {
-  display: grid;
-  gap: 0.75rem;
-  min-height: 10rem;
-  padding: 0.9rem;
-}
-
-.cs2-compare-card h3,
 .cs2-medal-card h3,
 .cs2-medal-header h2 {
   margin: 0;
-}
-
-.cs2-compare-card strong {
-  color: #fff7e5;
-  font-size: 2.1rem;
-  line-height: 1;
 }
 
 .cs2-medal-header {
@@ -837,6 +818,58 @@ footer {
 .cs2-medal-card p {
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.cs2-medal-sheet {
+  overflow-x: auto;
+  border: 1px solid rgba(247, 240, 221, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.cs2-medal-sheet table {
+  width: 100%;
+  min-width: 54rem;
+  border-collapse: collapse;
+}
+
+.cs2-medal-sheet th,
+.cs2-medal-sheet td {
+  border: 1px solid rgba(247, 240, 221, 0.1);
+  padding: 0.95rem 1rem;
+  text-align: left;
+}
+
+.cs2-medal-sheet thead th {
+  color: #f7d686;
+  background: rgba(214, 163, 58, 0.1);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.cs2-medal-sheet tbody th {
+  width: 16rem;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.cs2-medal-sheet tbody th strong,
+.cs2-medal-sheet td strong {
+  display: block;
+  color: #fff7e5;
+  font-size: 1.05rem;
+}
+
+.cs2-medal-sheet tbody th span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cs2-medal-sheet td {
+  color: #f7d686;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .game-trophy-hero {
@@ -939,7 +972,6 @@ footer {
 
   .trophy-game-nav,
   .cs2-filter-bar,
-  .cs2-comparison,
   .cs2-medal-grid,
   .game-trophy-grid {
     grid-template-columns: 1fr;

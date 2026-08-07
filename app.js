@@ -205,19 +205,32 @@ const renderCs2MemberPanel = (selectedId = "all") => {
   if (selectedId === "all") {
     const ranking = [...cs2Members].sort((a, b) => b.score - a.score);
     root.innerHTML = `
-      <div class="cs2-comparison">
-        ${ranking.map((member, index) => `
-          <article class="cs2-compare-card">
-            <div>
-              <span class="card-kicker">#${index + 1} / ${member.tag}</span>
-              <h3>${member.name}</h3>
-            </div>
-            <strong>${member.score}</strong>
-            <div class="progress" aria-label="${member.name} com ${member.score} pontos">
-              <span style="width: ${member.score}%"></span>
-            </div>
-          </article>
-        `).join("")}
+      <div class="cs2-medal-sheet" role="region" aria-label="Planilha de medalhas CS2">
+        <table>
+          <thead>
+            <tr>
+              <th>Membro</th>
+              <th>Medalha 1</th>
+              <th>Medalha 2</th>
+              <th>Medalha 3</th>
+              <th>Pontos</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${ranking.map((member) => `
+              <tr>
+                <th scope="row">
+                  <strong>${member.name}</strong>
+                  <span>${member.tag}</span>
+                </th>
+                <td>${member.medals[0]?.[0] || ""}</td>
+                <td>${member.medals[1]?.[0] || ""}</td>
+                <td>${member.medals[2]?.[0] || ""}</td>
+                <td><strong>${member.score}</strong></td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
       </div>
     `;
     return;
