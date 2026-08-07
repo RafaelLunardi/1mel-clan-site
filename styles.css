@@ -2619,6 +2619,10 @@ footer {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.f1-results-grid:has(.full-result) {
+  grid-template-columns: 1fr;
+}
+
 .f1-result-card {
   padding: 1rem;
 }
@@ -2715,6 +2719,33 @@ footer {
 
 .f1-result-card.pending p {
   color: #cfc7b4;
+}
+
+.f1-stage-result-tables {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+  gap: 0.85rem;
+}
+
+.f1-stage-result-tables h5 {
+  margin: 0 0 0.55rem;
+  color: #f7d686;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.f1-result-table table {
+  min-width: 34rem;
+}
+
+.f1-result-table.race table {
+  min-width: 48rem;
+}
+
+.f1-result-table th,
+.f1-result-table td {
+  padding: 0.56rem 0.58rem;
 }
 
 @media (max-width: 920px) {
@@ -2884,7 +2915,8 @@ footer {
 
   .f1-stage-grid,
   .f1-results-grid,
-  .f1-result-stats {
+  .f1-result-stats,
+  .f1-stage-result-tables {
     grid-template-columns: 1fr;
   }
 
