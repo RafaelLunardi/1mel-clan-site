@@ -3139,16 +3139,18 @@ footer {
 }
 
 .f1-status-detail-cards {
-  max-width: 45rem;
+  max-width: 25rem;
   min-height: 0;
-  margin: 1.25rem auto 0;
+  margin: 1.45rem auto 0;
 }
 
 .f1-status-detail-card {
   display: none;
+  width: min(25rem, 100%);
+  min-height: 25rem;
   border: 1px solid rgba(214, 163, 58, 0.32);
   border-radius: 6px;
-  padding: 1rem 1.2rem;
+  padding: 1.05rem;
   background:
     linear-gradient(135deg, rgba(214, 163, 58, 0.15), rgba(0, 0, 0, 0.42)),
     rgba(5, 5, 5, 0.78);
@@ -3166,16 +3168,57 @@ footer {
 
 .f1-status-detail-card strong {
   display: block;
-  margin: 0.4rem 0 0.35rem;
+  margin: 0.35rem 0 0.9rem;
   color: #fff;
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 0.95;
 }
 
-.f1-status-detail-card p {
-  margin: 0;
+.f1-status-detail-list {
+  display: grid;
+  max-height: 15.7rem;
+  overflow-y: auto;
+  border: 1px solid rgba(247, 240, 221, 0.1);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.f1-status-detail-list div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(5.6rem, 0.92fr);
+  gap: 0.45rem;
+  align-items: center;
+  min-height: 2.55rem;
+  border-bottom: 1px solid rgba(247, 240, 221, 0.07);
+  padding: 0.52rem 0.58rem;
+  text-align: left;
+}
+
+.f1-status-detail-list div:first-child {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom-color: rgba(214, 163, 58, 0.22);
+  background: rgba(12, 10, 6, 0.98);
+}
+
+.f1-status-detail-list div:last-child {
+  border-bottom: 0;
+}
+
+.f1-status-detail-list b {
+  color: #d6a33a;
+  font-size: 0.62rem;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.f1-status-detail-list em {
   color: #d8d0bf;
-  font-size: 0.95rem;
+  font-size: 0.72rem;
+  font-style: normal;
+  line-height: 1.25;
 }
 
 #status-vitorias:checked ~ .f1-status-detail-cards .detail-vitorias,
@@ -3369,6 +3412,19 @@ footer {
 
   .f1-status-strip strong {
     font-size: 3rem;
+  }
+
+  .f1-status-detail-card {
+    min-height: 22rem;
+  }
+
+  .f1-status-detail-list {
+    max-height: 13.5rem;
+  }
+
+  .f1-status-detail-list div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.2rem;
   }
 
   .f1-history-card,
