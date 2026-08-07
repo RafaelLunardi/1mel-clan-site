@@ -188,8 +188,9 @@ const cs2Members = [
     tag: "Pressao",
     score: 77,
     medals: [
-      ["Prata", "Ritmo forte", "Jogo acelerado, call direta e cara de campeonato."],
-      ["Bronze", "Execucao", "Ajuda a entrada acontecer sem travar o time."]
+      ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-dudu-season-7-medal.png"],
+      ["Season 2", "Season 2", "Medalha da Season 2.", "assets/cs2-dudu-season-2-medal.png"],
+      ["Season 4", "Season 4", "Medalha da Season 4.", "assets/cs2-dudu-season-4-medal.png"]
     ]
   },
   {
