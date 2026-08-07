@@ -1316,6 +1316,24 @@ footer {
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.55));
 }
 
+.f1-hero-cars {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  z-index: 2;
+  width: min(47rem, 48vw);
+  max-height: 18rem;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.82;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter:
+    drop-shadow(0 1.4rem 2.2rem rgba(0, 0, 0, 0.62))
+    saturate(1.02)
+    contrast(1.05);
+}
+
 .game-trophy-hero > .f1-championship-button {
   position: absolute;
   right: clamp(1.5rem, 7vw, 7rem);
@@ -3423,6 +3441,16 @@ footer {
 
   .game-trophy-hero > .f1-hero-actions {
     justify-content: flex-start;
+  }
+
+  .f1-hero-cars {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(32rem, 92vw);
+    max-height: 12rem;
+    margin: 1.5rem 0 0;
+    transform: none;
   }
 
   .f1-championships-heading {
