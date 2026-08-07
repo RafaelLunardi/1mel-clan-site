@@ -143,8 +143,9 @@ const cs2Members = [
     tag: "Impacto",
     score: 86,
     medals: [
-      ["Ouro", "Energia de lobby", "Puxa o ritmo quando a partida precisa acelerar."],
-      ["Prata", "Trade seguro", "Fecha dupla e segura pos-bomb sem desespero."]
+      ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-bassa-season-7-medal.png"],
+      ["Season 3", "Season 3", "Medalha da Season 3.", "assets/cs2-bassa-season-3-medal.png"],
+      ["Season 4", "Season 4", "Medalha da Season 4.", "assets/cs2-bassa-season-4-medal.png"]
     ]
   },
   {
