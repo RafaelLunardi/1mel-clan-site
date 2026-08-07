@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #08090b;
   --panel: #111319;
   --panel-2: #171a22;
@@ -1039,13 +1039,13 @@ footer {
 }
 
 .game-nav-card.game-cs2 {
-  --game-bg: url("assets/game-card-cs2-new.png");
+  --game-bg: url("assets/game-card-cs2-small.png");
 }
 
 .game-nav-card.game-cs2::before {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 54% auto;
+  background-size: 92px auto;
   filter: brightness(0.92) saturate(1.05);
   opacity: 0.86;
 }
