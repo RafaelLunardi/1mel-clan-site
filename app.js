@@ -210,61 +210,48 @@ const renderCs2MemberPanel = (selectedId = "all") => {
   const root = document.querySelector("#cs2-member-panel");
   if (!root) return;
 
+  const renderMedalRow = (member) => `
+    <tr>
+      <th scope="row">
+        <strong>${member.name}</strong>
+        <span>${member.tag}</span>
+      </th>
+      <td>
+        <div class="cs2-sheet-medals">
+          ${member.medals.map(([tier, title, , image]) => image
+            ? `<span class="cs2-sheet-medal image-medal"><img src="${image}" alt="${title}"></span>`
+            : `<span class="cs2-sheet-medal">${tier}</span>`
+          ).join("")}
+        </div>
+      </td>
+    </tr>
+  `;
+
+  const renderMedalSheet = (members, label) => `
+    <div class="cs2-medal-sheet" role="region" aria-label="${label}">
+      <table>
+        <thead>
+          <tr>
+            <th>Membro</th>
+            <th>Medalhas</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${members.map(renderMedalRow).join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+
   if (selectedId === "all") {
     const ranking = [...cs2Members].sort((a, b) => b.score - a.score);
-    root.innerHTML = `
-      <div class="cs2-medal-sheet" role="region" aria-label="Planilha de medalhas CS2">
-        <table>
-          <thead>
-            <tr>
-              <th>Membro</th>
-              <th>Medalhas</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${ranking.map((member) => `
-              <tr>
-                <th scope="row">
-                  <strong>${member.name}</strong>
-                  <span>${member.tag}</span>
-                </th>
-                <td>
-                  <div class="cs2-sheet-medals">
-                    ${member.medals.map(([tier, title, , image]) => image
-                      ? `<span class="cs2-sheet-medal image-medal"><img src="${image}" alt="${title}"></span>`
-                      : `<span class="cs2-sheet-medal">${tier}</span>`
-                    ).join("")}
-                  </div>
-                </td>
-              </tr>
-            `).join("")}
-          </tbody>
-        </table>
-      </div>
-    `;
+    root.innerHTML = renderMedalSheet(ranking, "Planilha de medalhas CS2");
     return;
   }
 
   const member = cs2Members.find((item) => item.id === selectedId);
   if (!member) return;
-  root.innerHTML = `
-    <div class="cs2-medal-header">
-      <span class="card-kicker">${member.tag}</span>
-      <h2>${member.name}</h2>
-      <strong>${member.score} pts</strong>
-    </div>
-    <div class="cs2-medal-grid">
-      ${member.medals.map(([tier, title, body]) => `
-        <article class="cs2-medal-card">
-          <span class="trophy-medal">${tier}</span>
-          <div>
-            <h3>${title}</h3>
-            <p>${body}</p>
-          </div>
-        </article>
-      `).join("")}
-    </div>
-  `;
+  root.innerHTML = renderMedalSheet([member], `Medalhas CS2 de ${member.name}`);
 };
 
 const setupCs2MemberTabs = () => {
