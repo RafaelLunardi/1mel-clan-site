@@ -178,8 +178,8 @@ const cs2Members = [
     tag: "Versatil",
     score: 79,
     medals: [
-      ["Prata", "Flex", "Entra em qualquer frente e ajuda a manter o lobby girando."],
-      ["Bronze", "Apoio", "Cobre angulo ingrato sem reclamar da funcao."]
+      ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-fer-season-7-medal.png"],
+      ["Season 3", "Season 3", "Medalha da Season 3.", "assets/cs2-fer-season-3-medal.png"]
     ]
   },
   {
