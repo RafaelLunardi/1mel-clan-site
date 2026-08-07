@@ -128,7 +128,7 @@ const cs2Members = [
   {
     id: "rafael",
     name: "Rafael",
-    tag: "Lider",
+    tag: "AWPer / IGL / Suporte",
     score: 94,
     medals: [
       ["Season 7", "Clutch decisivo", "Resolve round complicado quando a call pesa.", "assets/cs2-season-7-medal.png"],
@@ -140,7 +140,7 @@ const cs2Members = [
   {
     id: "bassa",
     name: "Bassa",
-    tag: "Impacto",
+    tag: "Lurker",
     score: 86,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-bassa-season-7-medal.png"],
@@ -151,7 +151,7 @@ const cs2Members = [
   {
     id: "zana",
     name: "Zana",
-    tag: "Controle",
+    tag: "Entry Fragger / Rifler",
     score: 82,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-zana-season-7-medal.png"],
@@ -163,7 +163,7 @@ const cs2Members = [
   {
     id: "felbyz",
     name: "Felbyz",
-    tag: "Clutch",
+    tag: "Second Fragger",
     score: 88,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-felbyz-season-7-medal.png"],
@@ -175,7 +175,7 @@ const cs2Members = [
   {
     id: "fer",
     name: "Fer",
-    tag: "Versatil",
+    tag: "Ancora",
     score: 79,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-fer-season-7-medal.png"],
@@ -185,7 +185,7 @@ const cs2Members = [
   {
     id: "dudu",
     name: "Dudu",
-    tag: "Pressao",
+    tag: "Rifler / Ancora",
     score: 77,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-dudu-season-7-medal.png"],
@@ -196,7 +196,7 @@ const cs2Members = [
   {
     id: "gabriel",
     name: "Gabriel",
-    tag: "Base",
+    tag: "Rifler / Entry Fragger",
     score: 74,
     medals: [
       ["Season 7", "Season 7", "Medalha da Season 7.", "assets/cs2-gabriel-season-7-medal.png"],
