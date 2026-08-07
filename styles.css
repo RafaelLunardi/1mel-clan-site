@@ -1275,6 +1275,15 @@ footer {
   filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.55));
 }
 
+.cs2-title-logo {
+  display: block;
+  width: min(33rem, 70vw);
+  max-height: clamp(4rem, 10vw, 6.8rem);
+  object-fit: contain;
+  object-position: left center;
+  filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.58));
+}
+
 .f1-hero .intro {
   max-width: 34rem;
 }
