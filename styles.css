@@ -2788,7 +2788,7 @@ footer {
 
 .f1-status-overview {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 0.75rem;
   margin-bottom: 1rem;
 }
@@ -2826,7 +2826,7 @@ footer {
   line-height: 0.9;
 }
 
-.f1-status-overview article:nth-child(4) strong {
+.f1-status-overview article:nth-child(5) strong {
   font-size: clamp(1.4rem, 2.3vw, 2.25rem);
 }
 
