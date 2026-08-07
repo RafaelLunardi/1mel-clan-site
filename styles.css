@@ -845,9 +845,7 @@ footer {
 }
 
 .race-time span {
-  display: block;
-  margin-top: 0.55rem;
-  color: #a8a095;
+  display: none;
 }
 
 .race-agenda-footer {
